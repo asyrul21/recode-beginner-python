@@ -32,3 +32,7 @@ To clone this repository to your local machine, follow these steps:
 5. Every week, new content will be removed/added according to tutor's or students' needs. To ammend those changes locally into your machines, before each class, run `git pull` as well.
 
 6. Happy Coding!
+
+## Pre Requisites
+
+Below going through the classes, you may find our demo classes helpful. You can find our demo class videos on our instagram's IGTV, and the git repository [here](https://github.com/asyrul21/recode-demos.git)
