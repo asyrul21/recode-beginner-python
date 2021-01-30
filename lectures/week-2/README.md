@@ -2,13 +2,18 @@
 
 For this lesson we will go over the fundamental concepts of GIT source control.
 
-For both of these parts, we will focus on the git commands which we use to communicate between our local repository and the repository stored in your Github account.
+This document is divided into THREE main parts:
+
+1. Conceptual Overview and Setup
+2. Creating your first repository
+   - will be useful later when you start your own project
+3. Working with exiting repository
 
 These words may not make much sense to you. In fact there are whole books [[1](https://www.goodreads.com/book/show/6518085-pro-git) ,[2](https://www.goodreads.com/book/show/51649022-beginning-git-and-github)] written just to educate programmers on Git. However, I will do my best to explain within the two parts.
 
 <br/>
 
-## Part 1: Conceptual Overview and Creating Your First Repository
+## Conceptual Overview and Setup
 
 ### Conceptual Overview
 
@@ -42,9 +47,13 @@ Before you can create your first repository on Github, you must first setup Git 
 
    <br/>
 
-### Creating Your First Repo
+## Creating Your First Repository
 
-Once you have set up your Git, you can then create a new repository:
+_IMPORTANT NOTE_
+
+_You would only go through this part before starting on your course project - sometime in Week 8_
+
+Once you have set up your Git, you can then create a new repository by following these steps:
 
 1. Create a new repository on your Github account.
 
@@ -124,7 +133,7 @@ For security purposes, Git may insist that you sign in to your Github using a Pe
 
 <br/>
 
-## Part 2: Working on Existing Repositories
+## Working on Existing Repositories
 
 ### Your Own Repositories
 
