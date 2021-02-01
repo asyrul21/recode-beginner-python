@@ -27,6 +27,8 @@ print(myArray)
 print(myMixedArray)
 ```
 
+<br/>
+
 ## Arithmetic
 
 You may find this code snippet in `src/arithmetic.py`
@@ -70,6 +72,8 @@ result = 9 % 2
 print(result)
 
 ```
+
+<br/>
 
 ## Casting
 
@@ -121,3 +125,15 @@ result = myFloat * 80
 # output to screen
 print(result)
 ```
+
+<br/>
+
+## References
+
+If you have problems when doing your Take Home Challenge, you may refer to:
+
+[W3SCHOOL Python](https://www.w3schools.com/python/default.asp)
+
+OR
+
+[Tutorials Point: Python](https://www.tutorialspoint.com/python/index.htm)
