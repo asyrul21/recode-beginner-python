@@ -69,6 +69,8 @@ else:
 
 ## Input
 
+From `src/input.py`
+
 ```python
 print("**********************")
 print("CM to M Converter")
@@ -102,17 +104,17 @@ Categories:
 
 ## TDEE (Total Daily Energy Expenditure) Calculator
 
-Based on the [Harris-Benedict Equation](https://en.wikipedia.org/wiki/Harris–Benedict_equation):
+Based on the [Harris-Benedict Equation (Revised by Mifflin)](https://en.wikipedia.org/wiki/Harris–Benedict_equation):
 
 TDEE = BMR \* Physical Activity Level (PAL)
 
 BMR formula for men:
 
-`BMR = 66.5 + ( 13.75 × weight in kg ) + ( 5.003 × height in cm ) – ( 6.755 × age in years )`
+`BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5`
 
 BMR for women:
 
-`BMR = 655 + ( 9.563 × weight in kg ) + ( 1.850 × height in cm ) – ( 4.676 × age in years )`
+`BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161`
 
 PAL:
 
