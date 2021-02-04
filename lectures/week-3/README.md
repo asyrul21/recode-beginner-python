@@ -128,7 +128,42 @@ print(result)
 
 <br/>
 
-## References
+# End of Class Exercise
+
+1. Follow the instructions in `src/endOfClass.py`
+
+2. Run your code by typing
+
+   ```python
+   python endOfClass.py
+   ```
+
+3. Your output should look something like this:
+
+   ```bash
+   The square of 5 is 25
+   The area of the rectangle is 180
+   ```
+
+# Take Home Challenge
+
+1. Follow the instructions in `src/takeHomeChallenge.py`
+
+2. Run your code by typing
+
+   ```python
+   python takeHomeChallenge.py
+   ```
+
+3. Your output should look something like this:
+
+   ```bash
+   The volume of the rectangular block is 1250
+   The area of the circle with radius 5 is 78.53975
+   The volume of the sphere with radius 5 is 523.5983333333332
+   ```
+
+# References
 
 If you have problems when doing your Take Home Challenge, you may refer to:
 
