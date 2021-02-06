@@ -35,3 +35,13 @@ def isThriller(book):
 
 def isComedy(book):
     return book in comedyBooks
+
+
+
+members = ["Bob21", "John12", "Siti93", "Ali44"]
+userName = input("Insert your username: ")
+
+if(userName in members):
+    print("Logged in successfully. Welcome back!")
+else:
+    print("Access denied. You are not a member.")
