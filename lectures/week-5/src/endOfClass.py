@@ -1,5 +1,6 @@
 # The first part is to output multiples of 3 between 0 - 20
 # we use the range() method to generate numbers from 1 - 20
+# it is crucial to note that range() returns an array/list
 # recall the use of the % operator - to check the remainder of a division
 # thus, if a number is divided by 3 and has remainder 0, the number is considered
 # to be a multiple of 3

@@ -1,29 +1,28 @@
-# The Calculate Area of either Rectangle or Triangle
-# 1. Ask user whether to calculate area of Rectangle or Triangle. To proceed with Rectangle, user needs to
-#   input "r". To proceed with Triangle, user needs to input "t". etc. Note that these are case sensitive
-#   For any other input, tell the user that the input is invalid.
-# 2. Based on user choice, ask more information to allow you to perform the calculation.
-#   For example, to calculate area of rectangle, you need to ask for width and length.
-#   To calculate area of circle, you need ask for the radius.
-# 3. Do not forget to cast the user input to float before performing calculation
-# 4. Perform the calculation accordingly and output to the user.
+# The Fibonacci Sequence Generator
+# 1. declare and empty array of name fiboSequence
+# 2. Use for loop with enumeration with a range method, between 0 - 1000
+# 3. If number is 0 or 1, simple append it to the list
+# 4. Otherwise, calculate the next number by adding the 2 numbers before it. Use array indices to do this.
+# 5. Append this new number to the sequence.
+# 6. Create a condition that, if this new number is more than 1000, break from the loop
+# 7. Now, slice your fiboSequence to get all items except the last one, since that number is more that 1000
+# 8. Initialise a string variable named output and assign the value "" to it.
+# 9. using the for enumerate loop once again, concatenate the numbers in your sliced Array to from one long string
+# 10. You should check that if it's not the last item, add comma (,) otherwise, don't add comma.
 
-print("******************************************")
-print("*** WELCOME TO THE SHAPE AREA CALCULATOR ***")
-print("******************************************")
-print()
-print()
+fiboSequence = []
 
-shape = input("Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: ")
-
-shapeName = ""
-area = 0.0
-
-# insert your logic here
+# your loop here
 
 
+result = fiboSequence[:-1]
+output = ""
 
-# how we want to output it:
-# print("The Area of the " + shapeName + " is " + str(area) + " meter squared.")
+# another loop here
+
+print(output)
+
+    
+
 
 
