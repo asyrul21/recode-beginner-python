@@ -1,5 +1,7 @@
-print("Welcome to the tic tac toe game!")
 import os
+
+os.system("clear")
+print("Welcome to the tic tac toe game!")
 
 
 def generateGameBoard():
