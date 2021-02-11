@@ -12,13 +12,13 @@
 
 fiboSequence = []
 
-# your loop here
+# your loop here to create the sequence
 
 
 result = fiboSequence[:-1]
 output = ""
 
-# another loop here
+# another loop here to create output string
 
 print(output)
 
