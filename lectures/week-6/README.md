@@ -140,6 +140,8 @@ There are two files which you need to solve:
 
 # Take Home Challenge
 
+## Part 1: The Hard Part
+
 This is a faily chellenging task. The following concepts may help you:
 
 - Optional Arguments. When defining functions, you can add an optional argument, by giving it a _default value_. For example:
@@ -166,7 +168,7 @@ This is a faily chellenging task. The following concepts may help you:
 
 <br/>
 
-## Execution
+### Execution
 
 1. Follow the instructions in `src/takeHomeChallenge-fibo-recursive.py`
 
@@ -187,3 +189,13 @@ This is a faily chellenging task. The following concepts may help you:
    How many numbers do you want in the Fibonacci sequence?: 10
    0, 1, 1, 2, 3, 5, 8, 13, 21, 34
    ```
+
+## Part 2: The Easy Part
+
+Read on articles on the web about:
+
+_Passing by Value vs Passing by Reference_
+
+This is a crucial concept in programming. Althought in Python variables are passed into functions by reference. However, in other languages like C++, you may choose either to pass by reference or value. Therefore, it is essential for you to know the difference between the two.
+
+An example of such article can be found [here](https://www.educative.io/edpresso/pass-by-value-vs-pass-by-reference).
