@@ -258,7 +258,7 @@ These 3 classes are:
            "contact": "01211111111",
            "lastVisitDate": "14/1/2021",
            "lastVisitDescription": "Fever.",
-           "lastVisitPrescription": "500mg Paracetamol."
+           "lastVisitTreatment": "500mg Paracetamol."
        },
        {
            "fullnName": "Siti Aminah",
@@ -266,7 +266,7 @@ These 3 classes are:
            "contact": "01222222222",
            "lastVisitDate": "3/1/2021",
            "lastVisitDescription": "Allergy reaction. Rashes on skin.",
-           "lastVisitPrescription": "Cetrizine tablets."
+           "lastVisitTreatment": "Cetrizine tablets."
        },
        {
            "fullnName": "Dwayne Johnson",
@@ -274,7 +274,7 @@ These 3 classes are:
            "contact": "0123333333",
            "lastVisitDate": "2/2/2021",
            "lastVisitDescription": "Broken right arm.",
-           "lastVisitPrescription": "Applied bandages."
+           "lastVisitTreatment": "Applied bandages."
        }
    ]
    ```
