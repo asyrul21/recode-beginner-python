@@ -191,6 +191,95 @@ My name is Mike Tyson. I am 35 years old!
 
 <br/>
 
+# End Of Class Exercise
+
+1. Follow the instructions in `src/endOfClass.py`
+
+2. Run your code by typing
+
+   ```python
+   python endOfClass.py
+   ```
+
+3. Your output should look something like this:
+
+   ```bash
+   ============================
+   Time: 6:00
+
+   Activity:
+   ----------------------------
+   Ahmad is resting......
+   Siti is resting......
+   Bob is resting......
+
+   ============================
+   Time: 7:00
+
+   Activity:
+   ----------------------------
+   Ahmad is resting......
+   Siti is resting......
+   Bob is resting......
+
+   ============================
+   Time: 8:00
+
+   Activity:
+   ----------------------------
+   Ahmad is resting......
+   Siti is resting......
+   Bob is resting......
+
+   ============================
+   Time: 9:00
+
+   Activity:
+   ----------------------------
+   Ahmad goes to work!
+   Siti goes to work!
+   Bob goes to work!
+
+   Ahmad is working!
+   Siti is working!
+   Bob is working!
+
+   ============================
+   Time: 10:00
+
+   Activity:
+   ----------------------------
+   Ahmad is working!
+   Siti is working!
+   Bob is working!
+
+   ...
+
+   ============================
+   Time: 17:00
+
+   Activity:
+   ----------------------------
+   Ahmad is working!
+   Siti is working!
+   Bob is working!
+
+   ============================
+   Time: 18:00
+
+   Activity:
+   ----------------------------
+   Time for Ahmad to go home!
+   Time for Siti to go home!
+   Time for Bob to go home!
+
+   Ahmad is resting......
+   Siti is resting......
+   Bob is resting......
+   ```
+
+   <br/>
+
 # Take Home Challenge
 
 There are two challenges, each is it's own containing application:
@@ -258,7 +347,7 @@ These 3 classes are:
    [
     {
         "ID": 1,
-        "fullnName": "Bob Marley",
+        "fullName": "Bob Marley",
         "birthdate": "15/3/1950",
         "contact": "01211111111",
         "lastVisitDate": "14/1/2021",
@@ -267,7 +356,7 @@ These 3 classes are:
     },
     {
         "ID": 2,
-        "fullnName": "Siti Aminah",
+        "fullName": "Siti Aminah",
         "birthdate": "5/2/1975",
         "contact": "01222222222",
         "lastVisitDate": "3/1/2021",
@@ -276,7 +365,7 @@ These 3 classes are:
     },
     {
         "ID": 3,
-        "fullnName": "Dwayne Johnson",
+        "fullName": "Dwayne Johnson",
         "birthdate": "21/4/1984",
         "contact": "0123333333",
         "lastVisitDate": "2/2/2021",
