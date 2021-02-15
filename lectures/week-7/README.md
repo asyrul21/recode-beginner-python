@@ -594,7 +594,7 @@ The TxtReader instance `txtReader` calls its instance method `load()` to transfo
 
    Word Count by Word:
    --------------------------
-   The => 1
+   the => 8
    four => 1
    seasons => 2
    are => 3
@@ -607,9 +607,8 @@ The TxtReader instance `txtReader` calls its instance method `load()` to transfo
    various => 1
    areas => 1
    of => 4
-   the => 7
-   United => 2
-   States => 2
+   united => 2
+   states => 2
    experience => 1
    drastically => 1
    different => 1
@@ -622,25 +621,25 @@ The TxtReader instance `txtReader` calls its instance method `load()` to transfo
    country => 1
    recognize => 1
    in => 3
-   California => 1
+   california => 1
    may => 3
    bring => 2
    heat => 1
-   New => 1
-   York => 1
+   new => 1
+   york => 1
    blizzards => 1
    but => 1
    both => 1
    periods => 1
    nevertheless => 1
-   Following => 1
+   following => 1
    begins => 1
    on => 2
    20 => 2
-   March => 1
+   march => 1
    ends => 1
    either => 1
-   June => 2
+   june => 2
    or => 1
    21 => 1
    this => 1
@@ -651,7 +650,7 @@ The TxtReader instance `txtReader` calls its instance method `load()` to transfo
    year => 2
    to => 2
    hemisphere => 2
-   For => 1
+   for => 1
    most => 1
    is => 2
    a => 1
@@ -668,7 +667,7 @@ The TxtReader instance `txtReader` calls its instance method `load()` to transfo
    green => 1
    grass => 1
    more => 2
-   It => 1
+   it => 1
    also => 1
    season => 1
    wherein => 1
