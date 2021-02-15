@@ -189,141 +189,177 @@ Hi!
 My name is Mike Tyson. I am 35 years old!
 ```
 
-## Importing Data from External Files
-
-### The JSON Format
-
-From `src/data/students.json`
-
-```json
-[
-  {
-    "firstName": "Bob",
-    "lastName": "Marley",
-    "age": 27,
-    "class": "Jupiter",
-    "contact": {
-      "home": "03787787787",
-      "mobile": "0120120120"
-    },
-    "major": "Music"
-  },
-  {
-    "firstName": "Mike",
-    "lastName": "Tyson",
-    "age": 35,
-    "class": "Mars",
-    "contact": {
-      "home": "03787787787",
-      "mobile": "0120120120"
-    },
-    "major": "Sports Science"
-  },
-  {
-    "firstName": "Emma",
-    "lastName": "Watson",
-    "age": 41,
-    "class": "Earth",
-    "contact": {
-      "home": "03787787787",
-      "mobile": "0120120120"
-    },
-    "major": "Acting"
-  }
-]
-```
-
-Loading the Data, from `src/import.py`:
-
-```python
-import json
-with open("data/students.json", "r") as read_file:
-    data = json.load(read_file)
-
-print()
-print("First name of the 2nd student: " + data[1]["firstName"])
-```
-
-Making changes to the data:
-
-```python
-print()
-print("Adding new entry to the data")
-
-# creating a new student dictionary object
-# or you can create a Student class and create new instance
-newStudent = {
-    "firstName": "James",
-    "lastName": "Hetfield",
-    "age": 35,
-    "class": "Earth",
-    "contact": {
-      "home": "03787787787",
-      "mobile": "0120120120"
-    },
-    "major": "Software Engineering"
-}
-
-data.append(newStudent)
-print(data)
-```
-
-Saving the data back to json:
-
-```python
-print()
-print("Saving the data back to JSON")
-
-with open("students.json", "w") as write_file:
-    json.dump(data, write_file)
-    print("Saved successfully!)
-```
-
-NOTE: The _json.dump_ above generates an _UNFORMATTED_ json, meaning it appears as a single line. Don't worry about this, it is still JSON and will still work to store your data.
-
-The updated JSON:
-
-```json
-[
-  {
-    "firstName": "Bob",
-    "lastName": "Marley",
-    "age": 27,
-    "class": "Jupiter",
-    "contact": { "home": "03787787787", "mobile": "0120120120" },
-    "major": "Music"
-  },
-  {
-    "firstName": "Mike",
-    "lastName": "Tyson",
-    "age": 35,
-    "class": "Mars",
-    "contact": { "home": "03787787787", "mobile": "0120120120" },
-    "major": "Sports Science"
-  },
-  {
-    "firstName": "Emma",
-    "lastName": "Watson",
-    "age": 41,
-    "class": "Earth",
-    "contact": { "home": "03787787787", "mobile": "0120120120" },
-    "major": "Acting"
-  },
-  {
-    "firstName": "James",
-    "lastName": "Hetfield",
-    "age": 35,
-    "class": "Earth",
-    "contact": { "home": "03787787787", "mobile": "0120120120" },
-    "major": "Software Engineering"
-  }
-]
-```
+<br/>
 
 # Take Home Challenge
 
-To successfully complete the Take Home Challenge, you first need to install prettyTable. Run the following command in your CLI:
+There are two challenges, each is it's own containing application:
+
+1. The Patients Book Application
+
+2. The Text File word counter
+
+## The Patients Book
+
+To successfully complete the Take Home Challenge, you first need to install the `prettyTable` library. Run the following command in your CLI:
 
 ```bash
 pip install -U prettytable
 ```
+
+Read more on the Pretty Table Library here: [The Pretty Table Library](https://pypi.org/project/prettytable/)
+
+### Helper Classes
+
+To assist your completion of this challenge, I have written Three(3) helper classes to help you load, write and print data. These classes can be found in `src/takeHomeChallenge-PatientsBook/helper`. I strongly advice that you DO NOT MODIFY ANY OF THE CODE IN HERE.
+
+All three of these classes HAVE ALREADY BEEN INSTANTIATED AND INITIALIZED AT THE TOP OF YOU `app.py` file. From `src/takeHomeChallenge-PatientsBook/app.y`:
+
+```python
+# do not modify the code in here ##############################
+from helper.JsonReadWriter import JsonReadWriter
+from helper.TableDisplay import TableDisplay
+from helper.NavigationDisplay import NavigationDisplay
+
+DATA_PATH_JSON = "data/patients.json"
+
+# load data
+jsonRW = JsonReadWriter(DATA_PATH_JSON)
+data = jsonRW.load()
+
+# create display instance
+tableDisplay = TableDisplay(data[0].keys())
+navDisplay = NavigationDisplay()
+# do not delete the code in here ##############################
+###############################################################
+```
+
+These 3 classes are:
+
+1. The `JsonReadWrite`. This class is meant to help you with _READING_ data from a JSON file, and to _WRITE_ or SAVE your data back to the JSON file.
+
+   NOTE: WE WILL LEARN ABOUT DATA FILE READ AND WRITE NEXT WEEK
+
+   The class has been instantiated to an object called `jsonRW`. Hence, ot use any of its methods, you need to reference the OBJECT. DONT reference to BLUEPRINT. Example:
+
+   ```python
+   jsonRW.save(data)
+   ```
+
+   The class has two methods:
+
+   - `load()` : To convert data from json files to the Python Data Structures. You do not need to care much about this method because it is only executed once. This method returns a LIST OF DICTIONARIES containing the data. The `data` now contains this:
+
+   ```bash
+   [
+       {
+           "fullnName": "Bob Marley",
+           "birthdate": "15/3/1950",
+           "contact": "01211111111",
+           "lastVisitDate": "14/1/2021",
+           "lastVisitDescription": "Fever.",
+           "lastVisitPrescription": "500mg Paracetamol."
+       },
+       {
+           "fullnName": "Siti Aminah",
+           "birthdate": "5/2/1975",
+           "contact": "01222222222",
+           "lastVisitDate": "3/1/2021",
+           "lastVisitDescription": "Allergy reaction. Rashes on skin.",
+           "lastVisitPrescription": "Cetrizine tablets."
+       },
+       {
+           "fullnName": "Dwayne Johnson",
+           "birthdate": "21/4/1984",
+           "contact": "0123333333",
+           "lastVisitDate": "2/2/2021",
+           "lastVisitDescription": "Broken right arm.",
+           "lastVisitPrescription": "Applied bandages."
+       }
+   ]
+   ```
+
+   - `save()` : This method saves the updated data back to the JSON file, enabling Data Persistence. This means that, even when you close and exit your app, the data remains. You will need to call this method after your have made modifications to the original `data` variable. It takes a list of Dictionaries similar to the one above as an argument.
+
+2. The `TableDisplay` class. This class simply displays the data in a nice table to the screen. The class has been instantiated to an object named `tableDisplay`. To use any of its methods, reference the OBJECT. Example:
+
+   ```python
+   tableDisplay.display(data)
+   ```
+
+   The class only has 1 public method, the `display()`. The method simply takes a list of data as an argument.
+
+   IMPORTANT NOTE:
+
+   For this method to work properly, the attributes of each data item MUST be the same. Therefore, when you add new data to the `data` list, create a Patient class first, to encapsulate the field names. Then, create a new Patient instance containing new data. Now the data is a Patient object. To convert this to a dictionary, use the `__dict__` object instance variable. Once you have the dictionary form of the new data, append it to the `data` list.
+
+   Example:
+
+   ```python
+   # create new patient instance
+   newPatient = Patient(fullName, birthdate, contact, lastVisitDate, lastVisitDescription, lastVisitTreatment)
+
+   # add the dictionary form to the data list
+   data.append(newPatient.__dict__)
+   ```
+
+3. The `NavigationDisplay` class. This class simply print to the screen navigational information, for the users to choose, like a menu. You may need to LOOK into this method to see what are the available functionalitites. However you DO NOT have to make changes.
+
+   There are 2 _void_ methods which you can access from the instantiated object `navDisplay`:
+
+   - `printMainMenu()` which prints the navigational choices
+
+   - `printExit()` which prints a goodbye to the user
+
+### Execution
+
+1. Follow the instructions in `src/takeHomeChallenge-PatientsBook/app.py`
+
+2. Run your code by typing
+
+   ```python
+   python app.py
+   ```
+
+3. Your output should look something like this:
+
+   ```bash
+    ----------------------------------------------------------
+   	    Patients Book App
+
+    +----------------+-----------+-------------+---------------+----------------------+--------------------+
+    |    fullName    | birthdate |   contact   | lastVisitDate | lastVisitDescription | lastVisitTreatment |
+    +----------------+-----------+-------------+---------------+----------------------+--------------------+
+    |   Bob Marley   | 15/3/1950 | 01211111111 |   14/1/2021   |        Fever.        | 500mg Paracetamol. |
+    |  Siti Aminah   |  5/2/1975 | 01222222222 |    3/1/2021   |   Rashes on skin.    | Cetrizine tablets. |
+    | Dwayne Johnson | 21/4/1984 |  0123333333 |    2/2/2021   |  Broken right arm.   | Applied bandages.  |
+    +----------------+-----------+-------------+---------------+----------------------+--------------------+
+
+    --------------------------------------------
+    Activity			        | Selection
+    --------------------------------------------
+    Create new contact		    |	1
+    Search for Contact by Name	|	2
+    Exit				        |	3
+    --------------------------------------------
+
+    What would you like to do? :
+   ```
+
+   ```bash
+   What would you like to do? : 2
+   Insert name to search for: mar
+   ```
+
+   ```bash
+    ----------------------------------------------------------
+                Patients Book App
+
+    +------------+-----------+-------------+---------------+----------------------+--------------------+
+    |  fullName  | birthdate |   contact   | lastVisitDate | lastVisitDescription | lastVisitTreatment |
+    +------------+-----------+-------------+---------------+----------------------+--------------------+
+    | Bob Marley | 15/3/1950 | 01211111111 |   14/1/2021   |        Fever.        | 500mg Paracetamol. |
+    +------------+-----------+-------------+---------------+----------------------+--------------------+
+
+    Press any key to continue
+   ```

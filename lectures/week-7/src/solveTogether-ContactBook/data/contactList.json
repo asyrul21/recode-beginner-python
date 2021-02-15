@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Bob Marley",
+        "relation": "Brother",
+        "home": "0311111111",
+        "mobile": "01211111111"
+    },
+    {
+        "name": "John Constantine",
+        "relation": "Cousin",
+        "home": "0322222222",
+        "mobile": "01222222222"
+    },
+    {
+        "name": "Emma Watson",
+        "relation": "Sister",
+        "home": "0333333333",
+        "mobile": "01233333333"
+    },
+    {
+        "name": "Ahmad",
+        "relation": "Friend",
+        "home": "099900090",
+        "mobile": ""
+    },
+    {
+        "name": "Mike Tyson",
+        "relation": "Uncle",
+        "home": "0101010101",
+        "mobile": "2020202020"
+    },
+    {
+        "name": "Yasmini",
+        "relation": "wife",
+        "home": "3213213213",
+        "mobile": "0130130133"
+    },
+    {
+        "name": "Kirk Hammet",
+        "relation": "Brother",
+        "home": "8181818181",
+        "mobile": "9191919191"
+    }
+]
