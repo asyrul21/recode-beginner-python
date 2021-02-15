@@ -681,3 +681,17 @@ The TxtReader instance `txtReader` calls its instance method `load()` to transfo
    become => 1
    active => 1
    ```
+
+# References
+
+[Python Input and Output](https://docs.python.org/3/tutorial/inputoutput.html)
+
+[Read and Write to CSV](https://docs.python.org/3/library/csv.html)
+
+[Get Dictionary Keys as list](https://www.geeksforgeeks.org/python-get-dictionary-keys-as-a-list/)
+
+[The Pretty Table Library](https://pypi.org/project/prettytable/)
+
+[Read and Write in JSON: Official Doc](https://docs.python.org/3/library/json.html#basic-usage)
+
+[Read and write in JSON: Real Python](https://realpython.com/python-json/)
