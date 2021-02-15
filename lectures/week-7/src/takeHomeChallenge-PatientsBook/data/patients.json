@@ -1,0 +1,34 @@
+[
+    {
+        "ID": 1,
+        "fullName": "Bob Marley",
+        "birthdate": "15/3/1950",
+        "contact": "01211111111",
+        "lastVisitDate": "14/1/2021",
+        "lastVisitDescription": "Fever. Prescribed with 500mg Paracetamol."
+    },
+    {
+        "ID": 2,
+        "fullName": "Siti Aminah",
+        "birthdate": "5/2/1975",
+        "contact": "01222222222",
+        "lastVisitDate": "3/1/2021",
+        "lastVisitDescription": "Rashes on skin. Prescribed with Cetrizine tablets."
+    },
+    {
+        "ID": 3,
+        "fullName": "Dwayne Johnson",
+        "birthdate": "21/4/1984",
+        "contact": "0123333333",
+        "lastVisitDate": "2/2/2021",
+        "lastVisitDescription": "Broken right arm. Applied cast."
+    },
+    {
+        "ID": 4,
+        "fullName": "Abdul Aziz",
+        "birthdate": "12/4/1988",
+        "contact": "9129129129",
+        "lastVisitDate": "3/3/2020",
+        "lastVisitDescription": "Athsmatic. Treated with nebulizer"
+    }
+]

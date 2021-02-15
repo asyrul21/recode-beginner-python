@@ -240,11 +240,11 @@ navDisplay = NavigationDisplay()
 
 These 3 classes are:
 
-1. The `JsonReadWrite`. This class is meant to help you with _READING_ data from a JSON file, and to _WRITE_ or SAVE your data back to the JSON file.
+1. The `JsonReadWriter`. This class is meant to help you with _READING_ data from a JSON file, and to _WRITE_ or SAVE your data back to the JSON file.
 
    NOTE: WE WILL LEARN ABOUT DATA FILE READ AND WRITE NEXT WEEK
 
-   The class has been instantiated to an object called `jsonRW`. Hence, ot use any of its methods, you need to reference the OBJECT. DONT reference the BLUEPRINT. Example:
+   The class has been instantiated to an object called `jsonRW`. Hence, to use any of its methods, you need to reference the OBJECT. DONT reference the BLUEPRINT. Example:
 
    ```python
    jsonRW.save(data)
@@ -256,37 +256,37 @@ These 3 classes are:
 
    ```bash
    [
-       {
-           "ID": 1,
-           "fullnName": "Bob Marley",
-           "birthdate": "15/3/1950",
-           "contact": "01211111111",
-           "lastVisitDate": "14/1/2021",
-           "lastVisitDescription": "Fever.",
-           "lastVisitTreatment": "500mg Paracetamol."
-       },
-       {
-           "ID": 2,
-           "fullnName": "Siti Aminah",
-           "birthdate": "5/2/1975",
-           "contact": "01222222222",
-           "lastVisitDate": "3/1/2021",
-           "lastVisitDescription": "Allergy reaction. Rashes on skin.",
-           "lastVisitTreatment": "Cetrizine tablets."
-       },
-       {
-            "ID": 3,
-           "fullnName": "Dwayne Johnson",
-           "birthdate": "21/4/1984",
-           "contact": "0123333333",
-           "lastVisitDate": "2/2/2021",
-           "lastVisitDescription": "Broken right arm.",
-           "lastVisitTreatment": "Applied bandages."
-       }
+    {
+        "ID": 1,
+        "fullnName": "Bob Marley",
+        "birthdate": "15/3/1950",
+        "contact": "01211111111",
+        "lastVisitDate": "14/1/2021",
+        "lastVisitDescription": "Fever.",
+        "lastVisitTreatment": "500mg Paracetamol."
+    },
+    {
+        "ID": 2,
+        "fullnName": "Siti Aminah",
+        "birthdate": "5/2/1975",
+        "contact": "01222222222",
+        "lastVisitDate": "3/1/2021",
+        "lastVisitDescription": "Allergy reaction. Rashes on skin.",
+        "lastVisitTreatment": "Cetrizine tablets."
+    },
+    {
+        "ID": 3,
+        "fullnName": "Dwayne Johnson",
+        "birthdate": "21/4/1984",
+        "contact": "0123333333",
+        "lastVisitDate": "2/2/2021",
+        "lastVisitDescription": "Broken right arm.",
+        "lastVisitTreatment": "Applied bandages."
+    }
    ]
    ```
 
-   - `save()` : This method saves the updated data back to the JSON file, enabling Data Persistence. This means that, even when you close and exit your app, the data remains. You will need to call this method after your have made modifications to the original `data` variable. It takes a list of Dictionaries similar to the one above as an argument.
+   - `save()` : This method saves the updated data back to the JSON file, enabling Data Persistence. This means that, even when you close and exit your app, the changes to the data remains. You will need to call this method after your have made modifications to the original `data` variable. It takes a list of Dictionaries similar to the one above as an argument.
 
 2. The `TableDisplay` class. This class simply displays the data in a nice table to the screen. The class has been instantiated to an object named `tableDisplay`. To use any of its methods, reference the OBJECT. Example:
 
@@ -443,4 +443,152 @@ You just need to complete functionalities 1,2 and 4. But if you decide to try ou
 
    Updated successfully.
    Press any key to continue:
+   ```
+
+<br/>
+
+## Word Counter
+
+This is the second part of the Take Home Challenge. You are to write a Python application to read a given .txt file, and perform word count to it.
+
+### Helper Classess
+
+To assist your completion of this challenge, I have written One helper classes to help you load a Text file. This class can be found in `src/takeHomeChallenge-wordCounter/helper`. I strongly advice that you DO NOT MODIFY ANY OF THE CODE IN HERE.
+
+This class HAS BEEN INSTANTIATED AND INITIALIZED AT THE TOP OF YOUR `app.py` file.
+
+From `src/takeHomeChallenge-wordCounter/app.y`:
+
+```python
+###############################################################
+# do not modify the code in here ##############################
+from helper.TxtReader import TxtReader
+import os
+
+DATA_PATH = "text.txt"
+
+# load data
+txtReader = TxtReader(DATA_PATH)
+rawSentence = txtReader.load()
+
+# do not delete the code in here ##############################
+###############################################################
+```
+
+#### The TxtReader Class
+
+This class is meant to help you load a text file stored at `src/takeHomeChallenge-wordCounter/`. If you open the file and have a look, it contains one paragraph of text:
+
+```txt
+The four seasons are spring, summer, fall, and winter, and although various areas of the United States experience drastically different weather during these times, all portions of the country recognize the seasons; winter in California may bring heat, and winter in New York may bring blizzards, but both periods are nevertheless winter. Following winter, spring begins on 20 March and ends on either 20 June or 21 June, in the United States (this date may vary slightly from year to year and hemisphere to hemisphere). For most, spring is a time of "thawing," when the cold and snow of the winter are replaced by sunshine, reasonable temperatures, green grass, and more. It is also the season wherein previously dormant bees and butterflies reemerge, and when birds become more active.
+```
+
+The TxtReader instance `txtReader` calls its instance method `load()` to transform the text in the file to a single string. The method also gets rid of punctuations and symbols for you. You may have a look at the Class file, but I strongly recommend to not make changes to it.
+
+### Execution
+
+1. Follow the instructions in `src/takeHomeChallenge-wordCounter/app.py`
+
+2. Run your code by typing
+
+   ```python
+   python app.py
+   ```
+
+3. Your output should look something like this:
+
+   ```bash
+   --------------------------
+   The Word Counter
+   --------------------------
+   Total words: 129
+
+   Word Count by Word:
+   --------------------------
+   The => 1
+   four => 1
+   seasons => 2
+   are => 3
+   spring => 3
+   summer => 1
+   fall => 1
+   and => 9
+   winter => 6
+   although => 1
+   various => 1
+   areas => 1
+   of => 4
+   the => 7
+   United => 2
+   States => 2
+   experience => 1
+   drastically => 1
+   different => 1
+   weather => 1
+   during => 1
+   these => 1
+   times => 1
+   all => 1
+   portions => 1
+   country => 1
+   recognize => 1
+   in => 3
+   California => 1
+   may => 3
+   bring => 2
+   heat => 1
+   New => 1
+   York => 1
+   blizzards => 1
+   but => 1
+   both => 1
+   periods => 1
+   nevertheless => 1
+   Following => 1
+   begins => 1
+   on => 2
+   20 => 2
+   March => 1
+   ends => 1
+   either => 1
+   June => 2
+   or => 1
+   21 => 1
+   this => 1
+   date => 1
+   vary => 1
+   slightly => 1
+   from => 1
+   year => 2
+   to => 2
+   hemisphere => 2
+   For => 1
+   most => 1
+   is => 2
+   a => 1
+   time => 1
+   thawing => 1
+   when => 2
+   cold => 1
+   snow => 1
+   replaced => 1
+   by => 1
+   sunshine => 1
+   reasonable => 1
+   temperatures => 1
+   green => 1
+   grass => 1
+   more => 2
+   It => 1
+   also => 1
+   season => 1
+   wherein => 1
+   previously => 1
+   dormant => 1
+   bees => 1
+   butterflies => 1
+   reemerge => 1
+   birds => 1
+   become => 1
+   active => 1
    ```
