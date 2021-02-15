@@ -213,7 +213,9 @@ Read more on the Pretty Table Library here: [The Pretty Table Library](https://p
 
 To assist your completion of this challenge, I have written Three(3) helper classes to help you load, write and print data. These classes can be found in `src/takeHomeChallenge-PatientsBook/helper`. I strongly advice that you DO NOT MODIFY ANY OF THE CODE IN HERE.
 
-All three of these classes HAVE ALREADY BEEN INSTANTIATED AND INITIALIZED AT THE TOP OF YOU `app.py` file. From `src/takeHomeChallenge-PatientsBook/app.y`:
+All three of these classes HAVE ALREADY BEEN INSTANTIATED AND INITIALIZED AT THE TOP OF YOUR `app.py` file. You can also use the `DATA_FIELDS` variable in your code. It simply gives you a list of all column names available in the data.
+
+From `src/takeHomeChallenge-PatientsBook/app.y`:
 
 ```python
 # do not modify the code in here ##############################
@@ -227,8 +229,10 @@ DATA_PATH_JSON = "data/patients.json"
 jsonRW = JsonReadWriter(DATA_PATH_JSON)
 data = jsonRW.load()
 
+DATA_FIELDS = data[0].keys()
+
 # create display instance
-tableDisplay = TableDisplay(data[0].keys())
+tableDisplay = TableDisplay(DATA_FIELDS)
 navDisplay = NavigationDisplay()
 # do not delete the code in here ##############################
 ###############################################################
@@ -240,7 +244,7 @@ These 3 classes are:
 
    NOTE: WE WILL LEARN ABOUT DATA FILE READ AND WRITE NEXT WEEK
 
-   The class has been instantiated to an object called `jsonRW`. Hence, ot use any of its methods, you need to reference the OBJECT. DONT reference to BLUEPRINT. Example:
+   The class has been instantiated to an object called `jsonRW`. Hence, ot use any of its methods, you need to reference the OBJECT. DONT reference the BLUEPRINT. Example:
 
    ```python
    jsonRW.save(data)
@@ -253,6 +257,7 @@ These 3 classes are:
    ```bash
    [
        {
+           "ID": 1,
            "fullnName": "Bob Marley",
            "birthdate": "15/3/1950",
            "contact": "01211111111",
@@ -261,6 +266,7 @@ These 3 classes are:
            "lastVisitTreatment": "500mg Paracetamol."
        },
        {
+           "ID": 2,
            "fullnName": "Siti Aminah",
            "birthdate": "5/2/1975",
            "contact": "01222222222",
@@ -269,6 +275,7 @@ These 3 classes are:
            "lastVisitTreatment": "Cetrizine tablets."
        },
        {
+            "ID": 3,
            "fullnName": "Dwayne Johnson",
            "birthdate": "21/4/1984",
            "contact": "0123333333",
@@ -297,11 +304,13 @@ These 3 classes are:
 
    ```python
    # create new patient instance
-   newPatient = Patient(fullName, birthdate, contact, lastVisitDate, lastVisitDescription, lastVisitTreatment)
+   newPatient = Patient(ID, fullName, birthdate, contact, lastVisitDate, lastVisitDescription)
 
    # add the dictionary form to the data list
    data.append(newPatient.__dict__)
    ```
+
+   For the `ID` of a new data item, you may need to apply some logic to allow this ID to be auto incremented as new data is added.
 
 3. The `NavigationDisplay` class. This class simply print to the screen navigational information, for the users to choose, like a menu. You may need to LOOK into this method to see what are the available functionalitites. However you DO NOT have to make changes.
 
@@ -310,6 +319,21 @@ These 3 classes are:
    - `printMainMenu()` which prints the navigational choices
 
    - `printExit()` which prints a goodbye to the user
+
+Notice now the menu looks like this:
+
+```bash
+--------------------------------------------
+Activity			| Selection
+--------------------------------------------
+Create new contact		|	1
+Search for Contact by Name	|	2
+Edit Record			|	3
+Exit				|	4
+--------------------------------------------
+```
+
+You just need to complete functionalities 1,2 and 4. But if you decide to try out the Edit part of this challenge, then you may need to add your logic in `app.py`.
 
 ### Execution
 
@@ -325,41 +349,98 @@ These 3 classes are:
 
    ```bash
     ----------------------------------------------------------
-   	    Patients Book App
+        Patients Book App
 
-    +----------------+-----------+-------------+---------------+----------------------+--------------------+
-    |    fullName    | birthdate |   contact   | lastVisitDate | lastVisitDescription | lastVisitTreatment |
-    +----------------+-----------+-------------+---------------+----------------------+--------------------+
-    |   Bob Marley   | 15/3/1950 | 01211111111 |   14/1/2021   |        Fever.        | 500mg Paracetamol. |
-    |  Siti Aminah   |  5/2/1975 | 01222222222 |    3/1/2021   |   Rashes on skin.    | Cetrizine tablets. |
-    | Dwayne Johnson | 21/4/1984 |  0123333333 |    2/2/2021   |  Broken right arm.   | Applied bandages.  |
-    +----------------+-----------+-------------+---------------+----------------------+--------------------+
+    +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+    | ID | fullName       | birthdate | contact     | lastVisitDate | lastVisitDescription                               |
+    +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+    | 1  | Bob Marley     | 15/3/1950 | 01211111111 | 14/1/2021     | Fever. Prescribed with 500mg Paracetamol.          |
+    | 2  | Siti Aminah    | 5/2/1975  | 01222222222 | 3/1/2021      | Rashes on skin. Prescribed with Cetrizine tablets. |
+    | 3  | Dwayne Johnson | 21/4/1984 | 0123333333  | 2/2/2021      | Broken right arm. Applied cast.                    |
+    +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
 
     --------------------------------------------
-    Activity			        | Selection
+    Activity			| Selection
     --------------------------------------------
-    Create new contact		    |	1
+    Create new contact		|	1
     Search for Contact by Name	|	2
-    Exit				        |	3
+    Edit Record			|	3
+    Exit				|	4
     --------------------------------------------
 
-    What would you like to do? :
+    What would you like to do? : 1
    ```
+
+   Add new data:
+
+   ```bash
+   What is the full name of the new patient?: Abdul Aziz
+   What is the patient's birthdate? (DD/MM/YYYY)?: 12/4/1988
+   What is the patient's contact number?: 9129129129
+   When was the patient's last visit? (DD/MM/YYYY): 3/3/2020
+   What happened in the last visit?: Athsmatic. Treated with nebulizer
+   ```
+
+   ```bash
+   ----------------------------------------------------------
+           Patients Book App
+
+   +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+   | ID | fullName       | birthdate | contact     | lastVisitDate | lastVisitDescription                               |
+   +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+   | 1  | Bob Marley     | 15/3/1950 | 01211111111 | 14/1/2021     | Fever. Prescribed with 500mg Paracetamol.          |
+   | 2  | Siti Aminah    | 5/2/1975  | 01222222222 | 3/1/2021      | Rashes on skin. Prescribed with Cetrizine tablets. |
+   | 3  | Dwayne Johnson | 21/4/1984 | 0123333333  | 2/2/2021      | Broken right arm. Applied cast.                    |
+   | 4  | Abdul Aziz     | 12/4/1988 | 9129129129  | 3/3/2020      | Athsmatic. Treated with nebulizer                  |
+   +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+
+   Added new record with ID 4
+   Press any key to continue:
+   ```
+
+   Searching
 
    ```bash
    What would you like to do? : 2
-   Insert name to search for: mar
+   Insert name to search for: abd
    ```
 
    ```bash
-    ----------------------------------------------------------
-                Patients Book App
+   ----------------------------------------------------------
+           Patients Book App
 
-    +------------+-----------+-------------+---------------+----------------------+--------------------+
-    |  fullName  | birthdate |   contact   | lastVisitDate | lastVisitDescription | lastVisitTreatment |
-    +------------+-----------+-------------+---------------+----------------------+--------------------+
-    | Bob Marley | 15/3/1950 | 01211111111 |   14/1/2021   |        Fever.        | 500mg Paracetamol. |
-    +------------+-----------+-------------+---------------+----------------------+--------------------+
+   +----+------------+-----------+------------+---------------+-----------------------------------+
+   | ID | fullName   | birthdate | contact    | lastVisitDate | lastVisitDescription              |
+   +----+------------+-----------+------------+---------------+-----------------------------------+
+   | 4  | Abdul Aziz | 12/4/1988 | 9129129129 | 3/3/2020      | Athsmatic. Treated with nebulizer |
+   +----+------------+-----------+------------+---------------+-----------------------------------+
 
-    Press any key to continue
+   1 results found.
+   Press any key to continue:
+   ```
+
+   BONUS: Edit a Record
+
+   ```bash
+   What would you like to do? : 3
+   What is the ID of the record?: 4
+   Which field would you like to update?: fullName
+   What is the new value?: Ali Aziz
+   ```
+
+   ```bash
+   ----------------------------------------------------------
+               Patients Book App
+
+   +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+   | ID | fullName       | birthdate | contact     | lastVisitDate | lastVisitDescription                               |
+   +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+   | 1  | Bob Marley     | 15/3/1950 | 01211111111 | 14/1/2021     | Fever. Prescribed with 500mg Paracetamol.          |
+   | 2  | Siti Aminah    | 5/2/1975  | 01222222222 | 3/1/2021      | Rashes on skin. Prescribed with Cetrizine tablets. |
+   | 3  | Dwayne Johnson | 21/4/1984 | 0123333333  | 2/2/2021      | Broken right arm. Applied cast.                    |
+   | 4  | Ali Aziz       | 12/4/1988 | 0120120120  | 3/3/2020      | Athmatic. Applied nebuliser                        |
+   +----+----------------+-----------+-------------+---------------+----------------------------------------------------+
+
+   Updated successfully.
+   Press any key to continue:
    ```
