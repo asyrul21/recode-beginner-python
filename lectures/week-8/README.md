@@ -129,9 +129,73 @@ The updated JSON:
 ]
 ```
 
+### The CSV
+
+From `src/solveTogether-ContactBookCSV/data/contactList.csv`
+
+```csv
+name,relation,home,mobile
+Bob Marley,Brother,0311111111,01211111111
+John Constantine,Cousin,0322222222,01222222222
+Emma Watson,Sister,0333333333,01233333333
+```
+
+Loading the data. There are two ways you can do this. The first one is to use the generic reader.
+
+From `src/solveTogether-ContactBookCSV/helper/CsvReadWriter`
+
+```python
+import csv
+
+data = []
+with open(self.file, "r") as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=",")
+    for row in csv_reader:
+        data.append(row)
+return data
+```
+
+This return your data as lists:
+
+```bash
+['name', 'relation', 'home', 'mobile']
+['Bob Marley', 'Brother', '0311111111', '01211111111']
+['John Constantine', 'Cousin', '0322222222', '01222222222']
+['Emma Watson', 'Sister', '0333333333', '01233333333']
+```
+
+The other way is to use the `DictReader` which reads your data as dictionary. Personally, I prefer this one. However, it depends on your requirements whether or not to use either of these.
+
+```python
+data = []
+with open(self.file, "r") as csv_file:
+    csv_reader = csv.DictReader(csv_file, delimiter=",")
+    for item in csv_reader:
+        data.append(item)
+return data
+```
+
+Now, each item in the data list is a dictionary object. Just like how we were working with the JSON reader and writer.
+
+Making changes to the data should be similar to how we did in JSON part above.
+
+Saving data back to CSV:
+
+```python
+def save(self, data):
+  fieldNames = data[0].keys()
+  with open(self.file, 'w', newline='') as csv_file:
+      writer = csv.DictWriter(csv_file, fieldnames=fieldNames)
+      writer.writeheader()
+      for item in data:
+          writer.writerow(item)
+```
+
 # References
 
-[Read and Write to CSV](https://docs.python.org/3/library/csv.html)
+[Read and Write to CSV: RealPython](https://realpython.com/python-csv/)
+
+[Read and Write to CSV: Official Doc](https://docs.python.org/3/library/csv.html)
 
 [Get Dictionary Keys as list](https://www.geeksforgeeks.org/python-get-dictionary-keys-as-a-list/)
 
