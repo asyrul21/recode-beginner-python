@@ -26,7 +26,7 @@
 
    - Close Anaconda navigator
 
-2. Open Comman prompt and type:
+2. Open Command prompt and type:
 
    ```bash
    python
@@ -36,7 +36,7 @@
 
    ![python cli](images/python-cli.png)
 
-3. To install additional dependencies, simple do
+3. To install additional dependencies, simply do
 
    ```
    conda install [name of package]
@@ -46,43 +46,57 @@
 
 <br/>
 
-## For Mac
+### For Mac
 
-1. Python is usually pre-installed on mac. To check (note tha capitalised V):
-
-   ```bash
-   python -V
-   ```
-
-   if you get something like this:
-
-   ```
-   Python 3.7.7
-   ```
-
-   then congratulations! You already have python installed
-
-2. Otherwise,
-
-3. Verify you have Pip, which is a dependency manager.
-
-   ```bash
-   pip -V
-   ```
-
-   You should get something like this:
-
-   ```bash
-   pip 20.1.1 from /opt/anaconda3/lib/python3.7/site-packages/pip (python 3.7)
-   ```
+1. Go [here](https://docs.anaconda.com/anaconda/install/mac-os/) and follow the steps.
 
 <br/>
 
-## Installing an IDE
+## Verify Installation
+
+Type:
+
+```bash
+python -V
+```
+
+You should get something like:
+
+```bash
+Python 3.7.7
+```
+
+Type:
+
+```bash
+pip -V
+```
+
+You should get something like:
+
+```bash
+pip 20.1.1 from /opt/anaconda3/lib/python3.7/site-packages/pip (python 3.7)
+```
+
+<br/>
+
+## Installing a Code Editor
+
+You can use [Visual Studio Code](https://code.visualstudio.com), although it is quite advanced. If you want simpler code editor:
+
+### For Windows Users
 
 1. Go to [Notepad++](https://notepad-plus-plus.org/downloads/)
 
-2. Customise your theme
+2. Download and install
+
+3. Customise your theme
+
+### For Mac Users
+
+1. Go to [TextMate](https://macromates.com)
+
+2. Download and install
 
 <br/>
 
