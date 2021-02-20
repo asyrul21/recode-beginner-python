@@ -1,0 +1,20 @@
+[
+    {
+        "ID": 1,
+        "name": "Yasmin Raihan",
+        "relation": "Wife",
+        "birthdate": "19/09/1994"
+    },
+    {
+        "ID": 2,
+        "name": "asyrul",
+        "relation": "myself",
+        "birthdate": "21/06/1993"
+    },
+    {
+        "ID": 3,
+        "name": "mike",
+        "relation": "kiki",
+        "birthdate": "20/02/2021"
+    }
+]
