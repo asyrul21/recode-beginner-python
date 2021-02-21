@@ -19,6 +19,7 @@ class TableDisplay:
         table.field_names = self.fields
         dataRows = self.convertDictToRows(dataList)
         table.add_rows(dataRows)
+        table.align = "l"
 
         os.system("clear")
         print("----------------------------------------------------------")

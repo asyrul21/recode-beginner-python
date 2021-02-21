@@ -1,5 +1,5 @@
 from datetime import datetime
-DATE_FORMAT = "%d/%m/%Y"
+from config import DATE_FORMAT
 
 class Birthdate:
     def __init__(self, ID, name, relation, birthdate):

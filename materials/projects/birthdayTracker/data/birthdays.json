@@ -7,14 +7,26 @@
     },
     {
         "ID": 2,
-        "name": "asyrul",
+        "name": "Asyrul Ahmad",
         "relation": "myself",
-        "birthdate": "21/06/1993"
+        "birthdate": "22/07/1994"
     },
     {
-        "ID": 3,
-        "name": "mike",
-        "relation": "kiki",
-        "birthdate": "20/02/2021"
+        "ID": 4,
+        "name": "Ahmad Albab",
+        "relation": "Cousin",
+        "birthdate": "21/02/1994"
+    },
+    {
+        "ID": 4,
+        "name": "Mama",
+        "relation": "Mother",
+        "birthdate": "19/04/1949"
+    },
+    {
+        "ID": 5,
+        "name": "Razeen",
+        "relation": "Nephew",
+        "birthdate": "15/10/2003"
     }
 ]
