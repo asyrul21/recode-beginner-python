@@ -8,7 +8,7 @@ import os
 
 
 ##############################################
-SYMBOLS = ["'", "/", "\\", "?"]
+SYMBOLS = ["'", "/", "\\", "?", "."]
 DATA_PATH_CSV_QUESTIONS = "data/questions.csv"
 DATA_PATH_JSON_SCOREBOARD = "data/scoreBoard.json"
 
@@ -113,7 +113,7 @@ def playGame(playerName):
             correct = False
             question = q["Question"]
             answer = q["Answer"]
-            
+
             navDisplay.displayQuestionAndScore(question, playerScore)
             playerAnswer = input("Your answer: ")
 
@@ -145,6 +145,7 @@ def playGame(playerName):
     }
     addScoreToData(playerObj)
 
+# main
 while(True):
     os.system("clear")
     print("\tWelcome to the Ultimate Trivia!")
