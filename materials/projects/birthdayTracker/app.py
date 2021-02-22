@@ -155,7 +155,6 @@ while(True):
 
         searchResults = []
         for item in data:
-            print(item)
             if name.lower() in item["name"].lower():
                 searchResults.append(item)
 
