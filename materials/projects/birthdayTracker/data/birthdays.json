@@ -13,12 +13,6 @@
     },
     {
         "ID": 4,
-        "name": "Ahmad Albab",
-        "relation": "Cousin",
-        "birthdate": "21/02/1994"
-    },
-    {
-        "ID": 4,
         "name": "Mama",
         "relation": "Mother",
         "birthdate": "19/04/1949"
@@ -26,7 +20,13 @@
     {
         "ID": 5,
         "name": "Razeen",
-        "relation": "Nephew",
+        "relation": "First Nephew",
         "birthdate": "15/10/2003"
+    },
+    {
+        "ID": 6,
+        "name": "Ayah Yasmin",
+        "relation": "Father in Law",
+        "birthdate": "22/04/1966"
     }
 ]

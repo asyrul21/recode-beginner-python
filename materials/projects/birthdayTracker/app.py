@@ -13,18 +13,18 @@ DATA_PATH_JSON = "data/birthdays.json"
 jsonRW = JsonReadWriter(DATA_PATH_JSON)
 data = jsonRW.load()
 
-DATA_FIELDS = data[0].keys()
+DATA_FIELDS = list(data[0].keys())
 
 # create display instance
 tableDisplay = TableDisplay(data[0].keys())
 navDisplay = NavigationDisplay()
 ##############################################
 
-def printFields(fields):
+def printFields():
     print()
     print("Fields:")
     print("--------------------------------------------")
-    for item in fields:
+    for item in DATA_FIELDS[1:]:
         print(item)
     print()
 
@@ -51,6 +51,11 @@ def checkIfValueIsValid(field, value):
     else:
         return True
 
+def generateDataID():
+    ListOfIDs = [int(item["ID"]) for item in data]
+    maxId = max(ListOfIDs)
+    return maxId + 1
+
 print("Welcome to the Birthdate Tracker!")
 print()
 while(True):
@@ -62,7 +67,7 @@ while(True):
 
     if(userAction == 1):
         try:
-            ID = len(data) + 1
+            ID = generateDataID()
             name = input("Insert name: ")
             relation = input("What is the relationship of this person to you?: ")
             birthdate = input("Type the birthdate in the format of DD/MM/YYYY: ")
@@ -103,19 +108,19 @@ while(True):
         recordID = input("What is the ID of the record to update?: ")
         recordID = int(recordID)
 
-        printFields(DATA_FIELDS)
-        field = input("Which field would you like to update?: ")
-
-        if(field not in DATA_FIELDS):
-            showMessage("Invalid field")
+        dataItem = getRecordById(data, recordID)
+        if(dataItem == {}):
+            showMessage("No record with such ID.")
         else:
-            newValue = input("What is the new value?: ")
+            printFields()
+            field = input("Which field would you like to update?: ")
 
-            dataItem = getRecordById(data, recordID)
-            valid = False
-            if(dataItem == {}):
-                showMessage("No record with such ID.")
+            if(field not in DATA_FIELDS):
+                showMessage("Invalid field.")
             else:
+                newValue = input("What is the new value?: ")
+
+                valid = False
                 try:
                     valid = checkIfValueIsValid(field, newValue)
                 except:
