@@ -125,60 +125,89 @@ Break those commands intro 3 categories:
 
 ### Navigation Commands - _MOST IMPORTANT_
 
-1. pwd / cd
+1. Show current directory
 
-- Show current directory
+   Unix: pwd
 
-2. ls / dir
+   Windows: cd
 
-- show list of files in current directory
+2. Show list of files in current directory
 
-3. cd \_ / cd \_
+   Unix: ls
 
-- traverse into or out of a folder
+   Windows: dir
+
+3. Traverse into or out of a folder
+
+   cd \_
+
+   cd ..
 
 ### File Manipulation Commands
 
-4. mkdir / mkdir
+4. Create a folder
 
-- create a folder
+   mkdir [name of folder]
 
-5. touch / call >>
+5. Create a file
 
-- create a file
+   Unix: touch [file]
 
-6. rm / del, rm -rf / deltree
+   Windows: call >> [file]
 
-- delete file, folder
-- -r means recursively
+6. Delete file, folder
 
-7. mv / move
+   Unix: rm [file]
 
-- move or rename a file
+   Windows: del [file]
 
-8. cp / copy, cp -R / xcopy
+   Unix: rm -rf [folder]
 
-- copy files, folder over
+   Windows: rd /s /q [path]
+
+7. Move or rename a file
+
+   Unix: mv [file]
+
+   Windows: move [file]
+
+8. Copy files, folder over
+
+   Unix: cp [file]
+
+   Windows: copy [file]
+
+   Unix: cp -R [folder]
+
+   Windows: xcopy [folder]
 
 ### File READ/WRITE Commands
 
-9. cat / type
+9. View the file
 
-- view the file
+   Unix: cat [file]
 
-10. nano / - (could be configured using WSL (Windows Sub System))
+   Windows: type [file]
 
-- edit the file
+10. Edit the file
+
+    Unix: nano [file]
+
+    Windows: - (could be configured using WSL (Windows Sub System))
 
 ### Other
 
-11. man / help
+11. Show manual or help
 
-- show manual or help
+    Unix: man [command]
 
-12. clear / cls
+    Windows: help
 
-- clear the command line screen
+12. Clear the command line screen
+
+    Unix: clear
+
+    Windows: cls
 
 13. Running and application - same for both - _IMPORTANT_
 
