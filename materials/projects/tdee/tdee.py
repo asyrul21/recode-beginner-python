@@ -1,5 +1,5 @@
 # BMI Calculator
-import os
+from helper.Utility import clearScreen
 
 #################### helper methods #######################
 def calculateBMRforMale(height, weight, age):
@@ -30,7 +30,7 @@ def getPALValue(palID):
 
 repeat = True
 while(repeat):
-    os.system("clear")
+    clearScreen()
     # if windows u use cls
     print("******************************************")
     print("***** WELCOME TO THE TDEE CALCULATOR *****")
@@ -83,7 +83,7 @@ while(repeat):
 
     repeat = False if ans == "N" or ans == "n" else True
 
-os.system("clear")
+clearScreen()
 # if windows u use cls
 print("Goodbye!")
 

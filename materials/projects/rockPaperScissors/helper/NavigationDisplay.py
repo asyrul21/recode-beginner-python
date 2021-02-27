@@ -1,4 +1,4 @@
-import os
+from .Utility import clearScreen
 
 class NavigationDisplay:
     def __init__(self):
@@ -15,7 +15,7 @@ class NavigationDisplay:
         print()
 
     def displayHUD(self, player1score, player2score, round):
-        os.system("clear")
+        clearScreen()
         print("--------------------------------------------------")
         print("\t\t      Round: " + str(round))
         print("--------------------------------------------------")
@@ -30,5 +30,5 @@ class NavigationDisplay:
         print()
 
     def printExit(self):
-        os.system("clear")
+        clearScreen()
         print("Goodbye!")

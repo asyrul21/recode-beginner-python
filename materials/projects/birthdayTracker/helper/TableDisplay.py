@@ -1,5 +1,5 @@
 from prettytable import PrettyTable
-import os
+from .Utility import clearScreen
 
 class TableDisplay:
     def __init__(self, fields):
@@ -21,7 +21,7 @@ class TableDisplay:
         table.add_rows(dataRows)
         table.align = "l"
 
-        os.system("clear")
+        clearScreen()
         print("----------------------------------------------------------")
         print("\t\t    The Birthday Tracker")
         print()

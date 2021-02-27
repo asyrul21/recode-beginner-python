@@ -22,5 +22,9 @@
     {
         "name": "Mark",
         "score": 5000
+    },
+    {
+        "name": "Bruce",
+        "score": 5000
     }
 ]

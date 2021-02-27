@@ -1,4 +1,4 @@
-import os
+from .Utility import clearScreen
 
 class NavigationDisplay:
     def __init__(self):
@@ -15,7 +15,7 @@ class NavigationDisplay:
         print()
 
     def displayQuestionAndScore(self, question, score, answer=False):
-        os.system("clear")
+        clearScreen()
         print("-------------------------------------------------------")
         print("\t\t\tScore: " + str(score))
         print("-------------------------------------------------------")
@@ -29,5 +29,5 @@ class NavigationDisplay:
 
 
     def printExit(self):
-        os.system("clear")
+        clearScreen()
         print("Goodbye!")

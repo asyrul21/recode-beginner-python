@@ -1,6 +1,6 @@
-import os
+from helper.Utility import clearScreen
 
-os.system("clear")
+clearScreen()
 print("Welcome to the tic tac toe game!")
 
 
@@ -79,7 +79,7 @@ def displayBoard(board):
                 
 
 def display(board, p1Score, p2Score, round):
-    os.system("clear")
+    clearScreen()
     print("--------------------------------------------------")
     print("\t\t      Round: " + str(round))
     print("--------------------------------------------------")
@@ -165,8 +165,8 @@ while(repeat):
     print()
     print("Congratulations! " + ultimateWinner + " won overall!")
     print()
-    ans = input("Play another round? (Y?N): ")
+    ans = input("Play another round? (Y/N): ")
     repeat = False if ans == "N" or ans == "n" else True
 
-os.system("clear")
+clearScreen()
 print("Goodbye!")

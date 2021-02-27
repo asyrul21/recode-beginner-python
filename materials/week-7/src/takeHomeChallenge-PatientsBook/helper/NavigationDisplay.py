@@ -1,4 +1,4 @@
-import os
+from .Utility import clearScreen
 
 class NavigationDisplay:
     def __init__(self):
@@ -16,5 +16,5 @@ class NavigationDisplay:
         print()
 
     def printExit(self):
-        os.system("clear")
+        clearScreen()
         print("Goodbye!")

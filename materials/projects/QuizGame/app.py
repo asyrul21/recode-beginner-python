@@ -4,7 +4,7 @@ from helper.NavigationDisplay import NavigationDisplay
 from helper.TableDisplay import TableDisplay
 import random
 import time
-import os
+from helper.Utility import clearScreen
 
 
 ##############################################
@@ -147,7 +147,7 @@ def playGame(playerName):
 
 # main
 while(True):
-    os.system("clear")
+    clearScreen()
     print("\tWelcome to the Ultimate Trivia!")
     print()
     navDisplay.printMainMenu()

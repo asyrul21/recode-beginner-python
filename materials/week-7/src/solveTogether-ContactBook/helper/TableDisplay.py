@@ -1,5 +1,5 @@
 from prettytable import PrettyTable
-import os
+from .Utility import clearScreen
 
 class TableDisplay:
     def __init__(self, fields):
@@ -20,7 +20,7 @@ class TableDisplay:
         dataRows = self.convertDictToRows(dataList)
         table.add_rows(dataRows)
 
-        os.system("clear")
+        clearScreen()
         print("----------------------------------------------------------")
         print("\t\t    Contact Book App")
         print()

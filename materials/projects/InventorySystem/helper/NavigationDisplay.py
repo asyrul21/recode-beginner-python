@@ -1,11 +1,11 @@
-import os
+from .Utility import clearScreen
 
 class NavigationDisplay:
     def __init__(self):
         ...
 
     def printMainMenu(self):
-        os.system("clear")
+        clearScreen()
         print("--------------------------------------------")
         print("\t    The Inventory System")
         print("--------------------------------------------")
@@ -22,5 +22,5 @@ class NavigationDisplay:
         print()
 
     def printExit(self):
-        os.system("clear")
+        clearScreen()
         print("Goodbye!")

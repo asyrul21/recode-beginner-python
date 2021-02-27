@@ -1,7 +1,7 @@
 ###############################################################
 # do not modify the code in here ##############################
 from helper.TxtReader import TxtReader
-import os
+import helper.Utility import clearScreen
 
 DATA_PATH = "text.txt"
 
