@@ -4,7 +4,7 @@ height = 10
 width = 7
 area = (height * width) / 2
 
-print("The area of the triangle of height " + str(height) + "m and width " + str(width) + "m is " + str(area))
+print("The result for area of the triangle of height " + str(height) + "m and width " + str(width) + "m is " + str(area))
 
 # 2. Calculate the volume of cone
 pi = 3.14159
