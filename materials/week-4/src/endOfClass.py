@@ -21,22 +21,29 @@ grade = ""
 message = ""
 score = float(score)
 
-# part 4...
-# write your if statements here...
-# if(score > 100):
-#     print("Your score is invalid!")
-#     exit()
-# elif(score >= 80 and score <= 100):
-#     grade = "A"
-# ...
 
-# write your if statements here...
-# if(grade == "A"):
-#     message = "Congratulations, you scored an A!"
-# elif(grade == "E"):
-#     ...
-# else:
-#   ...
+if(score > 100 or score < 0):
+    print("Your score is invalid!")
+    exit()
+elif(score >= 80 and score <= 100):
+    grade = "A"
+elif(score >= 60 and score <= 79):
+    grade = "B"
+elif(score >= 50 and score <= 59):
+    grade = "C"
+elif(score >= 40 and score <= 49):
+    grade = "D"
+elif(score <= 39):
+    grade = "E"
+
+if(grade == "A"):
+    message = "Congratulations, you scored an A!"
+elif(grade == "E"):
+    message = "We are sorry to inform you that you have failed the test"
+else:
+    message = "You have scored a " + grade
 
 print(message)
+
+
 
