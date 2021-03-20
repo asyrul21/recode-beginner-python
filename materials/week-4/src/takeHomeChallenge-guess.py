@@ -21,3 +21,14 @@ randomNumber = random.randint(1, 10)
 correct = False
 
 #     your logic goes here
+while(correct == False):
+    guess = input("Please insert your guess: ")
+    guess = int(guess)
+
+    if(guess == randomNumber):
+        print("Congratulations! Your guess was correct!")
+        correct = True
+    elif(guess > randomNumber):
+        print("Oops your guess is more than the answer!")
+    else:
+        print("Oops your guess is less than the answer!")

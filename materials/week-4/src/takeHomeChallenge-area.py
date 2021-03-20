@@ -19,7 +19,40 @@ shape = input("Choose your shape. For rectangle, type R. For Triangle, type T, f
 shapeName = ""
 area = 0.0
 
-# insert your logic here
+if(shape == "R"):
+    shapeName = "Rectangle"
+    height = input("Insert the height in m: ")
+    height = float(height)
+
+    width = input("Inser the width in m: ")
+    width = float(width)
+
+    area = height * width
+
+elif(shape == "T"):
+    shapeName = "Triangle"
+    height = input("Insert the height in m: ")
+    height = float(height)
+
+    width = input("Inser the width in m: ")
+    width = float(width)
+
+    area = (height * width) / 2
+
+elif(shape == "C"):
+    shapeName = "Circle"
+    radius = input("Insert the radius in m: ")
+    radius = float(radius)
+    pi = 3.14159
+
+    area = pi * radius * radius
+
+else:
+    print("Invalid input!")
+    exit()
+
+
+print("The Area of the " + shapeName + " is " + str(area) + " meter squared.")
 
 
 
