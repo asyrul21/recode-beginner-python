@@ -6,7 +6,8 @@ print("******************************************")
 print()
 
 repeat = True
-while(repeat):
+
+while(repeat == True):
     height = input("Please insert your height in meters: ")
     height = float(height)
 
@@ -28,13 +29,13 @@ while(repeat):
     print("Your body mass index is: " + str(bmi))
     print("You are " + result + ".")
 
-    answer = input("Would you like to calculate a new one? (Y/N): ")
+    ans = input("Would you like to calculate another? (Y/N): ")
 
-    if(answer == "N" or answer == "n"):
+    if(ans == "N" or ans == "n"):
         repeat = False
 
-    # repeat = False if answer == "N" or answer == "n" else True
+print("Goodbye!")
 
-print("Goodbye")
-    
+
+
 

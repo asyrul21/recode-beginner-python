@@ -1,6 +1,7 @@
 # output even numbers only
 
-# for number in range(0,20)
+# range(0,21) # 0,1,2..20
 
-range(0,20)
-[0,1,2,3,4,5,... 19]
+for num in range(0,21):
+    if(num % 2 == 0):
+        print(num)

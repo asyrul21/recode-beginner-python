@@ -15,3 +15,17 @@ word1 = input("Insert a word: ")
 word1 = word1.lower()
 
 # your logic here
+palindrome = True
+for index, letter in enumerate(word1):
+    letterFromBack = word1[len(word1) - (index + 1)]
+    if(letter == letterFromBack):
+        palindrome = True
+    else:
+        palindrome = False
+        break
+
+print()
+if(palindrome == True):
+    print("It is a palindrome!")
+else:
+    print("It is not!")

@@ -13,12 +13,25 @@
 fiboSequence = []
 
 # your loop here to create the sequence
-
+for index, number in enumerate(range(0,1000)):
+    if(number == 0 or number == 1):
+        fiboSequence.append(number)
+    else:
+        nextNumber = fiboSequence[index - 1] + fiboSequence[index - 2]
+        fiboSequence.append(nextNumber)
+        if(nextNumber > 1000):
+            break
 
 result = fiboSequence[:-1]
 output = ""
 
 # another loop here to create output string
+for index, number in enumerate(result):
+    if(index != len(result) - 1):
+        output = output + str(number) + ", "
+    else:
+        output = output + str(number)
+
 
 print(output)
 
