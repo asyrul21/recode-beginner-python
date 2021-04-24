@@ -27,16 +27,42 @@ while(True):
     userAction = int(userAction)
 
     if(userAction == 1):
-        ...
+        tableDisplay.display(data)
+
+        name = input("What is the name of the new contact? ")
+        relation = input("What is the relation of the contact? ")
+        home = input("What is the home number? ")
+        mobile = input("What is the mobile number? ")
+
+        newContact = {
+            "name": name,
+            "relation": relation,
+            "home": home,
+            "mobile": mobile
+        }
+
+        data.append(newContact)
+        csvRW.save(data)
+
+        tableDisplay.display(data)
+        showInvalidOrSuccess("New contact added!")
 
     elif(userAction == 2):
-        ...
+        name = input("Insert name to search for: ")
+
+        searchResults = []
+        for item in data:
+            if(name.lower() in item["name"].lower()):
+                searchResults.append(item)
+
+        tableDisplay.display(searchResults)
+        showInvalidOrSuccess(str(len(searchResults)) + " result(s) found.")
 
     elif(userAction == 3):
         break
 
     else:
-        print("Invalid Input!")
+        showInvalidOrSuccess("Invalid Input!")
         
 
 navDisplay.printExit()

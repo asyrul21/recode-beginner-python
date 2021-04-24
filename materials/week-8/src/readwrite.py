@@ -25,9 +25,9 @@ newStudent = {
 }
 
 data.append(newStudent)
-print(data)
+print(data[len(data) - 1])
 
-print()
+# print()
 print("Saving the data back to JSON")
 
 with open("data/students.json", "w") as write_file:

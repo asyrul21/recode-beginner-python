@@ -28,10 +28,11 @@ while(True):
     if(userAction == 1):
         tableDisplay.display(data)
 
-        name = input("What is the name of the new contact?: ")
-        relation = input("What is the relationship of the new contact?: ")
-        home = input("What is the home contact number?: ")
-        mobile = input("What is the mobile contact number?: ")
+        # get info
+        name = input("What is the name of the new contact: ")
+        relation = input("What is the relation of this contact?: ")
+        home = input("Insert the home contact number: ")
+        mobile = input("Insert mobile contact number: ")
 
         newContact = {
             "name": name,
@@ -44,10 +45,11 @@ while(True):
         jsonRW.save(data)
 
         tableDisplay.display(data)
-        showInvalidOrSuccess("Added a new record.")
+        showInvalidOrSuccess("Added a new record")
+
 
     elif(userAction == 2):
-        name = input("What is the name to search for?: ")
+        name = input(" Insert name to search for: ")
 
         searchResults = []
         for item in data:
@@ -65,3 +67,4 @@ while(True):
         
 
 navDisplay.printExit()
+
