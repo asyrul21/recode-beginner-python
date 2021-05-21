@@ -105,8 +105,9 @@ while(True):
                 showMessage("Invalid field.")
             else:
                 newValue = input("What is the new value?: ")
-                dataItem[field] = newValue
-                data[int(recordID) - 1] = dataItem
+                for item in data:
+                    if(item["ID"] == recordID):
+                        item[field] = newValue
 
                 csvRW.save(data)
                 tableDisplay.display(data)
