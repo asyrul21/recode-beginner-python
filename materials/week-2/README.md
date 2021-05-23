@@ -197,6 +197,25 @@ Once you have made those changes, you now should update your remote repository. 
 
 <br/>
 
+### Reverting Changes
+
+1. To discard all changes since last commit, do
+
+   ```bash
+   git reset HEAD --hard
+   ```
+
+2. To delete to created and untracked files and directories, do
+
+   ```bash
+   git clean -f // delete files
+   git clean -fd // delete files and folders
+   ```
+
+Reference: https://stackoverflow.com/questions/4630312/reset-all-changes-after-last-commit-in-git
+
+<br/>
+
 ### Other People's Repositories
 
 If you would like to clone other people's repository, you do not need to create a new one and manually copy and paste their repo. All you have to do is copy the link to the repository:
