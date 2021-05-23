@@ -4,6 +4,8 @@ Welcome to Recode's Beginner Python Masterclass!
 
 This is the official repository of the course, which contains all the materials you need throughout the course.
 
+UPDATE: This repostiory has been moved to the shared One Drive folder.
+
 To clone this repository to your local machine, follow these steps:
 
 1. Copy the link of this repo by clicking the Code button on the right and click the copy the link or click the clipboard button:

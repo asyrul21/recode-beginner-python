@@ -108,6 +108,7 @@ while(True):
                 for item in data:
                     if(item["ID"] == recordID):
                         item[field] = newValue
+                        break
 
                 csvRW.save(data)
                 tableDisplay.display(data)
