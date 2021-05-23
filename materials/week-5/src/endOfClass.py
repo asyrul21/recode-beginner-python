@@ -8,7 +8,6 @@
 print("The Multiples of 3:")
 for number in range(1, 20):
     # perform your logic here
-    print(number)
 
 # The second part is to output odd numbers between 0 - 20
 # like above, we use the range() method to generate numbers between 1 - 20

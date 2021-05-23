@@ -9,33 +9,12 @@
 # This function uses a loop.
 
 def fiboRecursion(number, sequence=[0, 1]):
-    # base condition
-    if(number <= 1):
-        return [0]
-    elif(number == 2):
-        return sequence
-    if(number - 2 == 0):
-        return sequence
-
-    sequence.append(
-            sequence[len(sequence) - 1] + sequence[len(sequence) - 2]
-    )
-    return fiboRecursion(number - 1, sequence)
+    ...
 
 def buildStringFromList(listArray):
-    output = ""
-    for index, item in enumerate(listArray):
-        if(index != len(listArray) - 1):
-            output = output + str(item) + ", "
-        else:
-            output = output + str(item)
-    return output
+    ...
 
 number = input("How many numbers do you want in the Fibonacci sequence?: ")
 number = int(number)
 
 # call your methods here
-fibonacciList = fiboRecursion(number)
-output = buildStringFromList(fibonacciList)
-
-print(output)
