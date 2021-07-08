@@ -10,11 +10,33 @@
 # 9. using the for enumerate loop once again, concatenate the numbers in your sliced Array to from one long string
 # 10. You should check that if it's not the last item, add comma (,) otherwise, don't add comma.
 
+print("Welcome to the Fibonacci Sequence Generator!")
+
 fiboSequence = []
 
 # your loop here to create the sequence
+for idx, num in enumerate(range(0, 1000)):
+    if(idx == 0 or idx == 1):
+        fiboSequence.append(num)
+    else:
+        nextNumber = fiboSequence[idx - 1] + fiboSequence[idx - 2]
+        if(nextNumber > 1000):
+            break
+        fiboSequence.append(nextNumber)
+    
 
 # another loop here to create output string
+output = ""
+for idx, num in enumerate(fiboSequence):
+    if(idx != len(fiboSequence) - 1):
+        output = output + str(num) + ", "
+    else:
+        output = output + str(num)
+
+print(output)
+
+
+
 
     
 

@@ -16,3 +16,28 @@ word1 = word1.lower()
 
 # your logic here
 palindrome = True
+
+# idx = 1
+for idx, char in enumerate(word1):
+    currentCharacter = word1[idx]
+    currentCharacterFromBack = word1[len(word1) - 1 - idx]
+
+    if(currentCharacter == currentCharacterFromBack):
+        palindrome = True
+    else:
+        palindrome = False
+        break
+
+print()
+if(palindrome == True):
+    print("It is a palindrome!")
+else:
+    print("Nope it is not a palindrome!")
+
+
+
+
+# ###################
+# R A C E C A R
+
+# A F T E R N O O N

@@ -1,1 +1,0 @@
-# Calculate are of triangle

@@ -18,5 +18,42 @@ print()
 
 # how we want to output it:
 # print("The Area of the " + shapeName + " is " + str(area) + " meter squared.")
+shape = input("Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: ")
+
+if(shape == "R" or shape == "r"):
+    print("Calculate area of rectangle!")
+    height = input("Insert height: ")
+    height = float(height)
+
+    width = input("Insert width: ")
+    width = float(width)
+
+    area = height * width
+    print("The area of the rectangle is: " + str(area))
+
+elif(shape == "T" or shape == "t"):
+    print("Calculate area of triangle")
+    height = input("Insert height: ")
+    height = float(height)
+
+    width = input("Insert width: ")
+    width = float(width)
+
+    area = (height * width) / 2
+    print("The area of the triangle is: " + str(area))
+
+elif(shape == "C" or shape == "c"):
+    print("Calculation area of circle")
+    pi = 3.14159
+
+    radius = input("Insert the radius: ")
+    radius = float(radius)
+    area = pi * radius * radius
+
+    print("The area of the circle is: " + str(area))
+
+else:
+    print("Invalid input!")
+    exit()
 
 

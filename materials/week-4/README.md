@@ -1,136 +1,42 @@
-# Lesson 4: Conditional Statements, If Statements and Inputs
+# All About Loops
 
-## If Statements
+## The While Loop
 
-From `src/ifStatement.py`
+From `src/while.py`
 
 ```python
-# import helper methods
-from meta import isMember, isComedy, isScienceFiction, isThriller
-
-#############################
-# Main
-#############################
-
-totalPrice = 0
-if (isMember("John")):
-	bookPrice = 12.00
-else:
-	bookPrice = 20.0
-totalPrice = totalPrice + bookPrice
-
-print("Total price for John: " + str(totalPrice))
-print("========================")
-
-totalPrice = 0
-if (isMember("Abu")):
-	bookPrice = 12.00
-else:
-	bookPrice = 20.0
-totalPrice = totalPrice + bookPrice
-
-print("Total price for Abu: " + str(totalPrice))
-print("========================")
-
-
-#############################
-# Multi condition
-#############################
-bookPrice = 50
-bookName = "Star Wars"
-if (isScienceFiction(bookName)):
-	discount = 10
-elif (isThriller(bookName)):
-	discount = 15
-elif (isComedy(bookName)):
-	discount = 5
-else:
-	discount = 20
-totalPrice = bookPrice * (100 - discount) / 100
-print("Multi Condition If Statement")
-print("Book name: " + bookName)
-print("Total price: " + str(totalPrice))
-
-
-#############################
-# Nested If
-#############################
-print("Nested If Statement")
-print("========================")
-number = 85
-if (number >= 80):
-	if(number <= 100):
-		print("You scored an A!")
-else:
-	print("Nope, you did not get an A.")
+number = 1
+while(number < 11):
+    print(str(number))
+    number = number + 1
 ```
 
-<br/>
+## The For Loop
 
-## Input
-
-From `src/input.py`
+From `src/for.py`
 
 ```python
-print("**********************")
-print("CM to M Converter")
-print("**********************")
+students = [ "Ali", "Abu", "John", "Siti", "Bob" ]
+
+print("The For In Loop")
+print("Print Students who name starts with an A:")
+for student in students:
+    if student[0] == "A" or student[0] == "a":
+        print(student)
+
 print()
+print("The For in Enumerate Loop")
+for index, student in enumerate(students):
+    print("Index: " + str(index) + " Name: " + student)
 
-userHeight = input("Enter your height in cm: ")
-print("Converting to meter...")
-heightInMeter = float(userHeight) / 100
-print("Your height in meter is " + str(heightInMeter) + "m")
+print()
+print("Print Only Student at 2nd and 3rd Position:")
+for index, student in enumerate(students):
+    if(index == 1 or index == 2):
+        print(student)
 ```
 
 <br/>
-
-# Solve Together References
-
-## (Body Mass Index) BMI Calculator
-
-The formula is BMI = weight(kg) / height (m) ^ 2
-
-Categories:
-
-    - Underweight: < 18.5
-    - Normal: 18.5 - 24.9
-    - Overweight: 25 - 29.9
-    - Obese: > 30
-
-[Reference 1](<https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator>)
-
-[Reference 2](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi-m.htm)
-
-## TDEE (Total Daily Energy Expenditure) Calculator
-
-Based on the [Harris-Benedict Equation (Revised by Mifflin)](https://en.wikipedia.org/wiki/Harris–Benedict_equation):
-
-TDEE = BMR \* Physical Activity Level (PAL)
-
-BMR formula for men:
-
-`BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5`
-
-BMR for women:
-
-`BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161`
-
-PAL:
-
-    - Sedentary (little to no exercise + work a desk job) = 1.2
-
-    - Lightly Active (light exercise 1-3 days / week) = 1.375
-
-    - Moderately Active (moderate exercise 3-5 days / week) = 1.55
-
-    - Very Active (heavy exercise 6-7 days / week) = 1.725
-
-    - Extremely Active (very heavy exercise, hard labor job, training 2x / day) = 1.9
-
-[Reference 1](https://en.wikipedia.org/wiki/Harris–Benedict_equation)
-
-[Reference 2](https://steelfitusa.com/2018/10/calculate-tdee/)
 
 # End of Class Exercise
 
@@ -145,23 +51,25 @@ PAL:
 3. Your output should look something like this:
 
    ```bash
-   Please insert your score: 30
-   We are sorry to inform you that you have failed the test
-   ```
+   The Multiples of 3:
+    3
+    6
+    9
+    12
+    15
+    18
 
-   ```bash
-   Please insert your score: 1000
-   Your score is invalid!
-   ```
-
-   ```bash
-   Please insert your score: 95
-   Congratulations, you scored an A!
-   ```
-
-   ```bash
-   Please insert your score: 55
-   You have scored a C
+    Odd Numbers:
+    1
+    3
+    5
+    7
+    9
+    11
+    13
+    15
+    17
+    19
    ```
 
    <br/>
@@ -170,97 +78,158 @@ PAL:
 
 There are two parts to this challenge:
 
-1. Number guessing game
-2. Calculate Area of Rectangle, Triangle or Circle
+1. Output a Fibonacci Sequence between 0-1000
+2. Palindrome Checker
 
-## Number Guessing Game
+## Fibonacci Sequence
 
-This is a slightly challenging task, as it involves a loop. HINT: use the `while` loop.
+A Fibonacci sequence is a sequence of which the following number is the sum of the previous 2 numbers, starting from 0. [The Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_number)
 
-1. Follow the instructions in `src/takeHomeChallenge-guess.py`
+`Example: 0, 1, 1, 2, 3, 5, 8, ...`
+
+3 is the sum of 1 and 2, 5 is the sum of 2 and 3, and so on.
+
+### Some Pre Requisites
+
+In order to solve this problem, you need to take note on a few things:
+
+- You may need to use the `range()` method, as explained from your endOfClass exercise. The `range()` method returns an _array_ (or sometimes refered to as _list_).
+
+- You may then wrap your `range()` with `enumerate()` to get access to the index of each number.
+
+- Another thing you need to know is the `break` statement. The `break` statement deliberately _STOPS_ a loop and get out of it: hence the sub title in the first slide. Example usage:
+
+  ```python
+  for i in range(0, 10):
+      print(i)
+      if i == 5:
+          break
+  ```
+
+- The code above outputs numbers from 0 to 5, but exit the loop right after that.
+
+- Another important thing is `Array Slicing`. All arrays and strings can be sliced. Slicing means to only take portion of the collection. Example usage:
+
+  ```python
+  myArray = ["Ali", "Mike", "John", "Siti", "Robert"]
+
+  sliced = myArray[0:3]
+
+  print(sliced)
+  ```
+
+- The code above sliced the array from location 0 to 3. Output:
+
+  ```bash
+  ['Ali', 'Mike', 'John']
+  ```
+
+- You also need to know the `append()` method. Every array can call this method simply to _ADD ITEMS_ to itself. Example:
+
+  ```python
+  myArray = ["Ali", "Mike", "John", "Siti", "Robert"]
+
+  myArray.append("Harry")
+
+  print(myArray)
+  ```
+
+- Output:
+
+  ```bash
+  ['Ali', 'Mike', 'John', 'Siti', 'Robert', 'Harry']
+  ```
+
+- Finally, you need to know the `len()` method, which simply returns the size of an array. Example usage:
+
+  ```python
+  myArray = ["Ali", "Mike", "John", "Siti", "Robert"]
+  print(len(myArray))
+  ```
+
+- The code above prints 5, because there are 5 elements in the array.
+
+- The `len()` method is useful to get the last item in the array. Example:
+
+  ```python
+  myArray = ["Ali", "Mike", "John", "Siti", "Robert"]
+
+  lastItem = myArray[len(myArray) - 1]
+  print(lastItem)
+  ```
+
+- The code above returns "Robert" because that's the last item. Note that we minus 1 because array indices start at 0.
+
+### Execution
+
+1. Follow the instructions in `src/takeHomeChallenge-fibo.py`
 
 2. Run your code by typing
 
    ```python
-   python takeHomeChallenge-guess.py
+   python takeHomeChallenge-fibo.py
    ```
 
 3. Your output should look something like this:
 
    ```bash
-   ******************************************
-   *** WELCOME TO THE NUMBER GUESSING GAME ***
-   ******************************************
-
-   Guess the number between 1 and 10 inclusive!
-
-   Please insert your guess: 1
-   Oops your guess is less than the answer!
-   Please insert your guess: 5
-   Oops your guess is more than the answer!
-   Please insert your guess: 3
-   Oops your guess is less than the answer!
-   Please insert your guess: 2
-   Oops your guess is less than the answer!
-   Please insert your guess: 4
-   Congratulations! Your guess was correct!
+    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
    ```
+
+4. Please note that we do NOT want to output a list. Use a loop to concatenate an initialised string, so we can get an output similar to the one above.
 
    <br/>
 
-## Calculate Area of Rectangle, Triangle or Circle
+## Palindrome Checker
 
-1. Follow the instructions in `src/takeHomeChallenge-area.py`
+A Palindrome is a word which when spelled backwards, becomes the same word. [Palindromes](https://examples.yourdictionary.com/palindrome-examples.html)
+
+For example: Noon, Racecar, Rotator, Level, etc..
+
+### Some Pre Requisites
+
+To Solve this problem, you may need to know a few things:
+
+- All that you need to know to solve the Fibonacci problem above
+
+- You need to know the `lower()` statement, which is accessible from all string variables. It simple converts the string to all lower case. This helps when you want to make your interface case insensitive whenever the user keys in Example usage:
+
+  ```python
+  name = "John Connor"
+
+  print(name.lower())
+  ```
+
+- output:
+
+  ```bash
+  john connor
+  ```
+
+### Execution
+
+1. Follow the instructions in `src/takeHomeChallenge-palindrome.py`
 
 2. Run your code by typing
 
    ```python
-   python takeHomeChallenge-area.py
+   python takeHomeChallenge-palindrome.py
    ```
 
 3. Your output should look something like this:
 
    ```bash
-   ******************************************
-   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
-   ******************************************
+   Welcome to the Palindrome Checker
 
+   Insert a word: racecar
 
-   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: x
-   Invalid input!
+   This is a palindrome!
    ```
 
    ```bash
-   ******************************************
-   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
-   ******************************************
+   Welcome to the Palindrome Checker
 
+   Insert a word: Alphabet
 
-   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: R
-   Insert the height in m: 5
-   Inser the width in m: 6
-   The Area of the Rectangle is 30.0 meter squared.
-   ```
-
-   ```bash
-   ******************************************
-   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
-   ******************************************
-
-
-   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: T
-   Insert the height in m: 3
-   Inser the width in m: 7
-   The Area of the Triangle is 10.5 meter squared.
-   ```
-
-   ```bash
-   ******************************************
-   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
-   ******************************************
-
-
-   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: C
-   Insert the radius in m: 5
-   The Area of the Circle is 78.53975 meter squared.
+   Nope this is not.
    ```

@@ -1,132 +1,136 @@
-# Week 3: Data Types, Referencing, Casting, Arithmetic
+# Lesson 3: Conditional Statements, If Statements and Inputs
 
-## Declaring and Referencing Variables
+## If Statements
 
-You may find this code snippet in `src/variables.py`
+From `src/ifStatement.py`
 
 ```python
-# declaring string variable
-myStringVariable = "Hello!"
+# import helper methods
+from meta import isMember, isComedy, isScienceFiction, isThriller
 
-# declaring number variable
-myNumberVariable = 123
+#############################
+# Main
+#############################
 
-# declaring boolean variable
-myBooleanVariable = True
+totalPrice = 0
+if (isMember("John")):
+	bookPrice = 12.00
+else:
+	bookPrice = 20.0
+totalPrice = totalPrice + bookPrice
 
-# declaring an array of string
-myArray = ["Ali", "Abu", "John", "Siti", "Bob"]
+print("Total price for John: " + str(totalPrice))
+print("========================")
 
-myMixedArray = [1 , 321.51, "John", True, "What is going on here??"]
+totalPrice = 0
+if (isMember("Abu")):
+	bookPrice = 12.00
+else:
+	bookPrice = 20.0
+totalPrice = totalPrice + bookPrice
 
-# output those variable by referencing their name
-print(myStringVariable)
-print(myNumberVariable)
-print(myBooleanVariable)
-print(myArray)
-print(myMixedArray)
+print("Total price for Abu: " + str(totalPrice))
+print("========================")
+
+
+#############################
+# Multi condition
+#############################
+bookPrice = 50
+bookName = "Star Wars"
+if (isScienceFiction(bookName)):
+	discount = 10
+elif (isThriller(bookName)):
+	discount = 15
+elif (isComedy(bookName)):
+	discount = 5
+else:
+	discount = 20
+totalPrice = bookPrice * (100 - discount) / 100
+print("Multi Condition If Statement")
+print("Book name: " + bookName)
+print("Total price: " + str(totalPrice))
+
+
+#############################
+# Nested If
+#############################
+print("Nested If Statement")
+print("========================")
+number = 85
+if (number >= 80):
+	if(number <= 100):
+		print("You scored an A!")
+else:
+	print("Nope, you did not get an A.")
 ```
 
 <br/>
 
-## Arithmetic
+## Input
 
-You may find this code snippet in `src/arithmetic.py`
+From `src/input.py`
 
 ```python
-# assign number variables
-number1 = 100
-number2 = 5
+print("**********************")
+print("CM to M Converter")
+print("**********************")
+print()
 
-# assign string variables
-string1 = "I love pizzas, "
-string2 = "but sandwiches are better."
-
-# adding
-result = number1 + number2
-print(result)
-
-# concatenating
-result = string1 + string2
-print(result)
-
-# minus numbers
-result = number1 - number2
-print(result)
-
-# minus string
-# will throw error
-# result = string1 - string2
-# print(result)
-
-# multiply
-result = number1 * number2
-print(result)
-
-# divide
-result = number1 / number2
-print(result)
-
-# remainder
-result = 9 % 2
-print(result)
-
+userHeight = input("Enter your height in cm: ")
+print("Converting to meter...")
+heightInMeter = float(userHeight) / 100
+print("Your height in meter is " + str(heightInMeter) + "m")
 ```
 
 <br/>
 
-## Casting
+# Solve Together References
 
-You may find this code snippet in `src/casting.py`
+## (Body Mass Index) BMI Calculator
 
-```python
-#****************************
-# converting string to integer
-#****************************
-# declare a stirng variable
-myVariable = "123"
+The formula is BMI = weight(kg) / height (m) ^ 2
 
-# convert this string to integer number
-myNumber = int(myVariable)
+Categories:
 
-# your variable can now be added accordingly
-result = myNumber + 1
+    - Underweight: < 18.5
+    - Normal: 18.5 - 24.9
+    - Overweight: 25 - 29.9
+    - Obese: > 30
 
-# output to screen
-print(result)
+[Reference 1](<https://www.diabetes.ca/managing-my-diabetes/tools---resources/body-mass-index-(bmi)-calculator>)
 
-#****************************
-# converting integer to string
-#****************************
-# declare an integer variable
-myIntegerVariable = 45
+[Reference 2](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi-m.htm)
 
-# convert this integer to string
-myStringVariable = str(myIntegerVariable)
+## TDEE (Total Daily Energy Expenditure) Calculator
 
-# your variable can now be added accordingly
-result = "I am " + myStringVariable + " years old."
+Based on the [Harris-Benedict Equation (Revised by Mifflin)](https://en.wikipedia.org/wiki/Harris–Benedict_equation):
 
-# output to screen
-print(result)
+TDEE = BMR \* Physical Activity Level (PAL)
 
-#****************************
-# converting string to float
-#****************************
-# declare an string variable
-myString = "3.1415926"
+BMR formula for men:
 
-# convert this string to float number
-myFloat = float(myString)
+`BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5`
 
-# your variable can now be added accordingly
-result = myFloat * 80
+BMR for women:
 
-# output to screen
-print(result)
-```
+`BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161`
 
-<br/>
+PAL:
+
+    - Sedentary (little to no exercise + work a desk job) = 1.2
+
+    - Lightly Active (light exercise 1-3 days / week) = 1.375
+
+    - Moderately Active (moderate exercise 3-5 days / week) = 1.55
+
+    - Very Active (heavy exercise 6-7 days / week) = 1.725
+
+    - Extremely Active (very heavy exercise, hard labor job, training 2x / day) = 1.9
+
+[Reference 1](https://en.wikipedia.org/wiki/Harris–Benedict_equation)
+
+[Reference 2](https://steelfitusa.com/2018/10/calculate-tdee/)
 
 # End of Class Exercise
 
@@ -141,34 +145,122 @@ print(result)
 3. Your output should look something like this:
 
    ```bash
-   The square of 5 is 25
-   The area of the rectangle is 180
+   Please insert your score: 30
+   We are sorry to inform you that you have failed the test
    ```
+
+   ```bash
+   Please insert your score: 1000
+   Your score is invalid!
+   ```
+
+   ```bash
+   Please insert your score: 95
+   Congratulations, you scored an A!
+   ```
+
+   ```bash
+   Please insert your score: 55
+   You have scored a C
+   ```
+
+   <br/>
 
 # Take Home Challenge
 
-1. Follow the instructions in `src/takeHomeChallenge.py`
+There are two parts to this challenge:
+
+1. Number guessing game
+2. Calculate Area of Rectangle, Triangle or Circle
+
+## Number Guessing Game
+
+This is a slightly challenging task, as it involves a loop. HINT: use the `while` loop.
+
+1. Follow the instructions in `src/takeHomeChallenge-guess.py`
 
 2. Run your code by typing
 
    ```python
-   python takeHomeChallenge.py
+   python takeHomeChallenge-guess.py
    ```
 
 3. Your output should look something like this:
 
    ```bash
-   The volume of the rectangular block is 1250
-   The area of the circle with radius 5 is 78.53975
-   The volume of the sphere with radius 5 is 523.5983333333332
+   ******************************************
+   *** WELCOME TO THE NUMBER GUESSING GAME ***
+   ******************************************
+
+   Guess the number between 1 and 10 inclusive!
+
+   Please insert your guess: 1
+   Oops your guess is less than the answer!
+   Please insert your guess: 5
+   Oops your guess is more than the answer!
+   Please insert your guess: 3
+   Oops your guess is less than the answer!
+   Please insert your guess: 2
+   Oops your guess is less than the answer!
+   Please insert your guess: 4
+   Congratulations! Your guess was correct!
    ```
 
-# References
+   <br/>
 
-If you have problems when doing your Take Home Challenge, you may refer to:
+## Calculate Area of Rectangle, Triangle or Circle
 
-[W3SCHOOL Python](https://www.w3schools.com/python/default.asp)
+1. Follow the instructions in `src/takeHomeChallenge-area.py`
 
-OR
+2. Run your code by typing
 
-[Tutorials Point: Python](https://www.tutorialspoint.com/python/index.htm)
+   ```python
+   python takeHomeChallenge-area.py
+   ```
+
+3. Your output should look something like this:
+
+   ```bash
+   ******************************************
+   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
+   ******************************************
+
+
+   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: x
+   Invalid input!
+   ```
+
+   ```bash
+   ******************************************
+   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
+   ******************************************
+
+
+   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: R
+   Insert the height in m: 5
+   Inser the width in m: 6
+   The Area of the Rectangle is 30.0 meter squared.
+   ```
+
+   ```bash
+   ******************************************
+   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
+   ******************************************
+
+
+   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: T
+   Insert the height in m: 3
+   Inser the width in m: 7
+   The Area of the Triangle is 10.5 meter squared.
+   ```
+
+   ```bash
+   ******************************************
+   *** WELCOME TO THE SHAPE AREA CALCULATOR ***
+   ******************************************
+
+
+   Choose your shape. For rectangle, type R. For Triangle, type T, for circle, type C: C
+   Insert the radius in m: 5
+   The Area of the Circle is 78.53975 meter squared.
+   ```
