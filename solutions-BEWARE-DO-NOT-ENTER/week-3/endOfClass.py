@@ -1,25 +1,44 @@
-# calculate square of a number and print to screen
-# 1. Define a variable named `myNumber` and assign the value 5 to it
-# 2. Find the squared value of that number by multiplying the variable by itself.
-# 3. Store the result in a new variable called `result`
-# 4. Use the print() syntax to output the result to screen
-myNumber = 5
-result = myNumber * myNumber
-print("The square of " + str(myNumber) + " is " + str(result))
+# Help user identify her grade based on her score
+# 1. Use the input() syntax to get the exam score of the user
+# 2. Store this input ina variable called `score`
+# 3. Cast this score variable to a float
+# 4. Use if statements to identify the grade of this score. Use the following rules:
+#   - if score > 100 : tell user that the score is invalid
+#   - if score is between 80 < x < 100 inclusive, then the frade is an A
+#   - if score is between 60 < x < 79 inclusive, then the frade is an B
+#   - if score is between 50 < x < 59 inclusive, then the frade is an C
+#   - if score is between 40 < x < 49 inclusive, then the frade is an D
+#   - if score < inclusive 39, then the grade is an E
+#
+# 5. Use another if statement, to output the user according to the following rules:
+#   - if grade is A, then output "Congratulations! You scored an A!"
+#   - if grade is E, then output "We are sorry to inform you that you have failed the test"
+#   - for all other cases, output "You scored a [the grade]"
 
+score = input("Please insert your score: ")
+grade = ""
 
-# calculate the area of a rectangle and print to screen
-# 1. Define a variable named `width`, and assign it the value of 15
-# 2. Define a variable named `height` and assign it the value of 12
-# 3. Find the area by multiplying the width and the height
-# 4. Store the result in a variable named `result`
-# 5. Use print() to output the result
-width = 15
-height = 12
+score = float(score)
+if(score > 100 or score < 0):
+    print("Your score is invalid!")
+    exit()
+elif(score >= 80 and score <= 100):
+    grade = "A"
+elif(score >= 60 and score <= 79):
+    grade = "B"
+elif(score >= 50 and score <= 59):
+    grade = "C"
+elif(score >= 40 and score <= 49):
+    grade = "D"
+elif(score <= 39):
+    grade = "E"
 
-result = width * height
-print("The area of the rectangle is " + str(result))
+if(grade == "A"):
+    message = "Congratulations, you scored an A!"
+elif(grade == "E"):
+    message = "We are sorry to inform you that you have failed the test"
+else:
+    message = "You have scored a " + grade
 
+print(message)
 
-# run this file by executing
-# python endOfClass.py

@@ -1,7 +1,8 @@
-# output even numbers only
-# it is crucial to note that range() returns an array/list
+def isEven(num):
+    return num % 2 == 0
 
-print("Even Numbers:")
-for number in range(1, 50):
-    if number % 2 == 0:
-        print(number)
+numbers = range(1, 20)
+
+for number in numbers:
+    if(isEven(number)):
+        print(str(number) + " is even")
