@@ -9,7 +9,7 @@ from helper.JsonReadWriter import JsonReadWriter
 jsonRW = JsonReadWrite("data/json/students.json")
 ```
 
-## Importing Pre-Installed/Built-In Pythin Libraries
+## Importing Pre-Installed/Built-In Python Libraries
 
 ```python
 import pprint
