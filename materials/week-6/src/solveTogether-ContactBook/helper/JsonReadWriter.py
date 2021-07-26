@@ -6,9 +6,13 @@ class JsonReadWriter:
 
     def load(self):
         data = []
-        with open(self.file, "r") as read_file:
-            data = json.load(read_file)
-        return data
+        try:
+            with open(self.file, "r") as read_file:
+                data = json.load(read_file)
+                return data
+        except IOError as err:
+            print("File reading failed!")
+            print(str(err))
 
     def save(self, data):
         print("Saving the data...")

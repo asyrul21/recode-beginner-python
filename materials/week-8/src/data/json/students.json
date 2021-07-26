@@ -1,0 +1,34 @@
+[
+  {
+    "firstName": "Bob",
+    "lastName": "Marley",
+    "age": 27,
+    "class": "Jupiter",
+    "contact": { "home": "03787787787", "mobile": "0120120120" },
+    "major": "Music"
+  },
+  {
+    "firstName": "Mike",
+    "lastName": "Tyson",
+    "age": 35,
+    "class": "Mars",
+    "contact": { "home": "03787787787", "mobile": "0120120120" },
+    "major": "Sports Science"
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Watson",
+    "age": 41,
+    "class": "Earth",
+    "contact": { "home": "03787787787", "mobile": "0120120120" },
+    "major": "Acting"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Hetfield",
+    "age": 35,
+    "class": "Earth",
+    "contact": { "home": "03787787787", "mobile": "0120120120" },
+    "major": "Software Engineering"
+  }
+]

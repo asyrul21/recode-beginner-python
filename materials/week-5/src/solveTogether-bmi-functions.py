@@ -5,10 +5,13 @@
 # - Obese: > 30
 
 def getFloatInput(message):
-    ans = input(message)
-    return float(ans)
+    floatInput = input(message)
+    return float(floatInput)
 
-def getBmiResult(bmi):
+def calculateBMI(height, weight):
+    return weight / (height * height)
+
+def getBMIResult(bmi):
     if(bmi < 18.5):
         return "Underweight"
     elif(bmi >= 18.5 and bmi <= 24.9):
@@ -18,18 +21,17 @@ def getBmiResult(bmi):
     else:
         return "Obese"
 
-def calculateBMI(height, weight):
-    return weight / (height * height)
-
-def printResult(bmi, result):
+def outputResult(bmi, result):
     print("Your BMI is: " + str(bmi))
     print("You are " + result)
 
+
+# main
 userHeight = getFloatInput("Please insert your height in meters: ")
 userWeight = getFloatInput("Please insert your weight in KG: ")
 bmi = calculateBMI(userHeight, userWeight)
-result = getBmiResult(bmi)
-printResult(bmi, result)
+result = getBMIResult(bmi)
+outputResult(bmi, result)
 
 
 

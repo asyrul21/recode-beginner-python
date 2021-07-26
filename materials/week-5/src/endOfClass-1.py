@@ -8,15 +8,13 @@
 
 print("Printing odd numbers")
 # define your function here
-def isOdd(num):
-    if(num % 2 != 0):
-        return True
-    else:
-        return False
+def isOdd(number):
+    ...
 
-numbers = range(0, 20) # 0,1,2..19
+numbers = range(0, 20)
 for number in numbers:
     if(isOdd(number)):
         print(str(number) + " is an odd number")
-    else:
-        print(str(number) + " is an even number")
+
+
+

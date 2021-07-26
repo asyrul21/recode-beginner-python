@@ -1,10 +1,12 @@
 # Calculate are of triangle
 
-def areaofTriangle(width, height):
-    result = (width * height) / 2
-    return result
+def calculateAreaOfTriangle(width, height):
+    return (width * height) / 2
 
-print(str(areaofTriangle(100, 20)))
-print(str(areaofTriangle(100, 30)))
-print(str(areaofTriangle(100, 40)))
-print(str(areaofTriangle(100, 10)))
+
+
+print("Area of triangle is: " + str(calculateAreaOfTriangle(120, 50)))
+print("Area of triangle is: " + str(calculateAreaOfTriangle(120, 40)))
+print("Area of triangle is: " + str(calculateAreaOfTriangle(120, 30)))
+print("Area of triangle is: " + str(calculateAreaOfTriangle(120, 20)))
+print("Area of triangle is: " + str(calculateAreaOfTriangle(120, 10)))

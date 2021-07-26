@@ -8,13 +8,38 @@
 # which the function will convert the list to a string of text, seperated by a comma
 # This function uses a loop.
 
+print("Fibonacci Recursion!")
+
 def fiboRecursion(number, sequence=[0, 1]):
-    ...
+    # base condition
+    if(number <= 1):
+        return [0]
+    elif(number == 2):
+        return sequence
+
+    if(number - 2 == 0):
+        return sequence
+
+    sequence.append(
+        sequence[len(sequence) - 1] + sequence[len(sequence) - 2]
+    )
+    return fiboRecursion(number - 1, sequence)
 
 def buildStringFromList(listArray):
-    ...
+    output = ""
+    for idx, item in enumerate(listArray):
+        if(idx == len(listArray) - 1):
+            output = output + str(item)
+        else:
+            output = output + str(item) + ", "
+    return output
+    
 
 number = input("How many numbers do you want in the Fibonacci sequence?: ")
 number = int(number)
+
+fibonacciArray = fiboRecursion(number)
+result = buildStringFromList(fibonacciArray)
+print(result)
 
 # call your methods here

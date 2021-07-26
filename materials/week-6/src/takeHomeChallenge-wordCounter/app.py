@@ -1,7 +1,7 @@
 ###############################################################
 # do not modify the code in here ##############################
 from helper.TxtReader import TxtReader
-import helper.Utility import clearScreen
+from helper.Utility import clearScreen
 
 DATA_PATH = "text.txt"
 
@@ -21,8 +21,30 @@ rawSentence = txtReader.load()
 # 5. Write a function to print a dictionary nicely.
 # 6. Call this function at the end of your program
 
+print("Raw sentence")
+# print(rawSentence)
 
 def printDictionary(wordDictionary):
-    ...
+    for item in wordDictionary.keys():
+        print(item + " => " + str(wordSummary[item]))
 
 ## word counting logic goes here
+words = rawSentence.split(" ")
+wordSummary = {}
+
+for word in words:
+    word = word.lower()
+    if(word not in wordSummary.keys()):
+        wordSummary[word] = 1
+    else:
+        wordSummary[word] = wordSummary[word] + 1
+
+clearScreen()
+print("--------------------------")
+print("The Word Counter")
+print("--------------------------")
+print("Total words: " + str(len(words)))
+print()
+print("Word Count by Word:")
+print("--------------------------")
+printDictionary(wordSummary)

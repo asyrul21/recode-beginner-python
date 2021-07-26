@@ -18,5 +18,20 @@
         "ID": 5,
         "event": "Got my first jab",
         "date": "10/07/2021"
+    },
+    {
+        "ID": 6,
+        "event": "Went to the dentist for first time",
+        "date": "21/07/2021"
+    },
+    {
+        "ID": 7,
+        "event": "Malaysia Independence Day",
+        "date": "31/08/1957"
+    },
+    {
+        "ID": 8,
+        "event": "Ate papaya for the first time",
+        "date": "24/07/2021"
     }
 ]

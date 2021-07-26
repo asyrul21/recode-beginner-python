@@ -1,62 +1,50 @@
 [
-  {
-    "name": "Bob Marley",
-    "relation": "Brother",
-    "home": "0311111111",
-    "mobile": "01211111111"
-  },
-  {
-    "name": "John Constantine",
-    "relation": "Cousin",
-    "home": "0322222222",
-    "mobile": "01222222222"
-  },
-  {
-    "name": "Emma Watson",
-    "relation": "Sister",
-    "home": "0333333333",
-    "mobile": "01233333333"
-  },
-  {
-    "name": "Ahmad",
-    "relation": "Friend",
-    "home": "099900090",
-    "mobile": ""
-  },
-  {
-    "name": "Mike Tyson",
-    "relation": "Uncle",
-    "home": "0101010101",
-    "mobile": "2020202020"
-  },
-  {
-    "name": "Yasmini",
-    "relation": "wife",
-    "home": "3213213213",
-    "mobile": "0130130133"
-  },
-  {
-    "name": "Kirk Hammet",
-    "relation": "Brother",
-    "home": "8181818181",
-    "mobile": "9191919191"
-  },
-  {
-    "name": "Lars Ulrich",
-    "relation": "Drummer",
-    "home": "8908908",
-    "mobile": "71717171"
-  },
-  {
-    "name": "Tommy",
-    "relation": "Friend",
-    "home": "432432432",
-    "mobile": "567567567"
-  },
-  {
-    "name": "Johny Bravo",
-    "relation": "Brother",
-    "home": "423423423",
-    "mobile": "987987987"
-  }
+    {
+        "name": "Bob Marley",
+        "relation": "Brother",
+        "home": "0311111111",
+        "mobile": "01211111111"
+    },
+    {
+        "name": "John Constantine",
+        "relation": "Cousin",
+        "home": "0322222222",
+        "mobile": "01222222222"
+    },
+    {
+        "name": "Emma Watson",
+        "relation": "Sister",
+        "home": "0333333333",
+        "mobile": "01233333333"
+    },
+    {
+        "name": "Ahmad",
+        "relation": "Friend",
+        "home": "099900090",
+        "mobile": ""
+    },
+    {
+        "name": "Mike Tyson",
+        "relation": "Uncle",
+        "home": "0101010101",
+        "mobile": "2020202020"
+    },
+    {
+        "name": "Roy",
+        "relation": "Friend",
+        "home": "",
+        "mobile": "456456456"
+    },
+    {
+        "name": "Willy",
+        "relation": "Cousin",
+        "home": "1231231",
+        "mobile": "4564566"
+    },
+    {
+        "name": "William",
+        "relation": "Brother",
+        "home": "123123123",
+        "mobile": "213123123"
+    }
 ]

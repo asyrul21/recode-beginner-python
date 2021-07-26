@@ -15,28 +15,25 @@ print("Welcome to the Fibonacci Sequence Generator!")
 fiboSequence = []
 
 # your loop here to create the sequence
-for idx, num in enumerate(range(0, 1000)):
+for idx, number in  enumerate(range(0,1000)):
     if(idx == 0 or idx == 1):
-        fiboSequence.append(num)
+        fiboSequence.append(number)
     else:
         nextNumber = fiboSequence[idx - 1] + fiboSequence[idx - 2]
         if(nextNumber > 1000):
             break
         fiboSequence.append(nextNumber)
-    
+        
+output = ""
 
 # another loop here to create output string
-output = ""
-for idx, num in enumerate(fiboSequence):
-    if(idx != len(fiboSequence) - 1):
-        output = output + str(num) + ", "
+for index, item in enumerate(fiboSequence):
+    if(index == len(fiboSequence) - 1):
+        output = output + str(item)
     else:
-        output = output + str(num)
+        output = output + str(item) + ", "
 
 print(output)
-
-
-
 
     
 
