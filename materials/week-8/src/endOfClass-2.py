@@ -7,5 +7,5 @@
 #   those living in Malaysia.
 #   List down the names, their marks, their addresses, their parents' names, and
 #   their contact numbers of these students, to help you with the shipping work. Also,
-#   don't forget to save this resulting data back as a CSV!
+#   don't forget to save this resulting data back as a CSV! Name this file as result.csv
 #   TIP: You may need to perform more than one Joins!
