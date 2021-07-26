@@ -111,6 +111,35 @@ Students with filtered columns:
 10      M   10     32    Earth        1.4
 ```
 
+### Filter to show only relevant columns
+
+DOCS: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.filter.html
+
+Show columns Name and Marks only
+
+```python
+filteredStudents2 = studentsDataFrame.filter(items=["Name", "Marks"])
+print()
+print("Students with filtered columns using filter:")
+print(filteredStudents2)
+```
+
+Result:
+
+```bash
+              Name  Marks
+1     John Marston     72
+2          Fatimah     85
+3     Muhammad Ali     65
+4       Usain Bolt     75
+5      Emma Watson     88
+6       Abdul Aziz     92
+7        Tom Hanks     81
+8   Dwayne Johnson     42
+9      Siti Aishah     66
+10       Bob Dylan     32
+```
+
 ### Row Filter by Value
 
 Show only students from Mercury group

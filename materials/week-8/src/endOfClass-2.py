@@ -1,3 +1,9 @@
+import pandas as pd
+
+# set pandas to show all columns
+pd.set_option("display.max_columns", None)
+pd.set_option('display.expand_frame_repr', False)
+
 # For this week's end of class, given the data files, you need to perform
 # simple data analytics using Pandas to answer a few  Analysis questions:
 # 1. What is the average height of all the students joining from Malaysia?

@@ -1,0 +1,82 @@
+[
+    {
+        "Name":"John Marston",
+        "Age":12,
+        "Marks":72,
+        "Group":"Mercury",
+        "address":"23 jalan 22\/99",
+        "country":"Malaysia"
+    },
+    {
+        "Name":"Fatimah",
+        "Age":11,
+        "Marks":85,
+        "Group":"Mercury",
+        "address":"2 jalan baru 45 Bandar Baru Bangi",
+        "country":"Malaysia"
+    },
+    {
+        "Name":"Muhammad Ali",
+        "Age":12,
+        "Marks":65,
+        "Group":"Earth",
+        "address":"23 Thomas Road Bangsar",
+        "country":"Malaysia"
+    },
+    {
+        "Name":"Usain Bolt",
+        "Age":10,
+        "Marks":75,
+        "Group":"Mars",
+        "address":"7 jalan tembok Seberang Prai",
+        "country":"Malaysia"
+    },
+    {
+        "Name":"Emma Watson",
+        "Age":12,
+        "Marks":88,
+        "Group":"Mars",
+        "address":"1 New Road, Nice City",
+        "country":"Singapore"
+    },
+    {
+        "Name":"Abdul Aziz",
+        "Age":12,
+        "Marks":92,
+        "Group":"Mars",
+        "address":"5 jalan batu tiga, Subang Jaya",
+        "country":"Malaysia"
+    },
+    {
+        "Name":"Tom Hanks",
+        "Age":10,
+        "Marks":81,
+        "Group":"Earth",
+        "address":"31-2 Top Residences",
+        "country":"Indonesia"
+    },
+    {
+        "Name":"Dwayne Johnson",
+        "Age":12,
+        "Marks":42,
+        "Group":"Mercury",
+        "address":"12-1-14 Beauty Apartment",
+        "country":"Singapore"
+    },
+    {
+        "Name":"Siti Aishah",
+        "Age":10,
+        "Marks":66,
+        "Group":"Mars",
+        "address":"17 Motorcycle Rd, Bukit Batok",
+        "country":"Singapore"
+    },
+    {
+        "Name":"Bob Dylan",
+        "Age":10,
+        "Marks":32,
+        "Group":"Earth",
+        "address":"8 Jalan Soekarno",
+        "country":"Indonesia"
+    }
+]

@@ -21,7 +21,8 @@ print()
 print("Addresses:")
 print(addressesDataFrame)
 
-# column filter
+# column filter with drop
+# remove unwanted columns
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
 
 filteredStudents = studentsDataFrame.drop(columns=["Name"])
@@ -31,6 +32,15 @@ print(filteredStudents)
 print()
 print("View a single column:")
 print(filteredStudents["Marks"])
+
+# column filter with filter
+# select only relevant columns
+# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.filter.html
+
+filteredStudents2 = studentsDataFrame.filter(items=["Name", "Marks"])
+print()
+print("Students with filtered columns using filter:")
+print(filteredStudents2)
 
 # simple row filter
 studentsInMercury = studentsDataFrame[(studentsDataFrame["Group"] == "Mercury")]
