@@ -1,6 +1,25 @@
 # Lesson 8: Introduction to Libraries, Pandas
 
-## Setup
+## Importing Locally Written Modules
+
+```python
+from helper.JsonReadWriter import JsonReadWriter
+
+# Use
+jsonRW = JsonReadWrite("data/json/students.json")
+```
+
+## Importing Pre-Installed/Built-In Pythin Libraries
+
+```python
+import pprint
+import time
+
+# use
+time.sleep(1)
+```
+
+## Pandas Setup
 
 1. Make sure you have installed `pandas`. To see all installed third party libraries, run:
 
