@@ -426,3 +426,11 @@ _result_csv.csv_ :
 
 ...
 ```
+
+# References
+
+1. Row filters by value: https://stackoverflow.com/questions/11869910/pandas-filter-rows-of-dataframe-with-operator-chaining
+
+2. Removing empty row below header: https://stackoverflow.com/questions/35193688/extraneous-empty-row-after-header
+
+3. Listing installed libraries: https://stackoverflow.com/questions/20612645/how-to-find-the-installed-pandas-version
