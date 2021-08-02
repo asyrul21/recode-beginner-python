@@ -42,5 +42,13 @@
     {
         "name": "Robert",
         "score": 4000
+    },
+    {
+        "name": "Zorro",
+        "score": 4000
+    },
+    {
+        "name": "Mickey",
+        "score": 4000
     }
 ]

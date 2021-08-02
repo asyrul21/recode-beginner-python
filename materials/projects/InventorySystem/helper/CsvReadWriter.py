@@ -6,7 +6,7 @@ class CsvReadWriter:
 
     def load(self):
         data = []
-        with open(self.file, "r") as csv_file:
+        with open(self.file, "r", encoding="utf-8") as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=",")
             for row in csv_reader:
                 data.append(row)
@@ -14,7 +14,7 @@ class CsvReadWriter:
 
     def loadAsDictionary(self):
         data = []
-        with open(self.file, "r") as csv_file:
+        with open(self.file, "r", encoding="utf-8") as csv_file:
             csv_reader = csv.DictReader(csv_file, delimiter=",")
             for item in csv_reader:
                 data.append(item)
